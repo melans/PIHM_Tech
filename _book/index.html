@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Penn State Integrated Hydrologic Model(PIHM)</title>
+  <meta name="description" content="PIHM technical documentation">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Penn State Integrated Hydrologic Model(PIHM)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="PIHM technical documentation" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Penn State Integrated Hydrologic Model(PIHM)" />
+  
+  <meta name="twitter:description" content="PIHM technical documentation" />
+  
+
+<meta name="author" content="Lele Shu">
+
+
+<meta name="date" content="2019-05-03">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="workflow-of-pihm-system.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">PIHM Technical Documentation</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-pihm"><i class="fa fa-check"></i><b>1.1</b> Why PIHM?</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#history-of-pihm-system"><i class="fa fa-check"></i><b>1.2</b> History of PIHM system</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#steps-of-pihm-modeling"><i class="fa fa-check"></i><b>1.3</b> Steps of PIHM modeling</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#essential-terrestrial-variables"><i class="fa fa-check"></i><b>1.3.1</b> Essential Terrestrial Variables?</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#a-priori-data-sources"><i class="fa fa-check"></i><b>1.3.2</b> A-Priori Data Sources</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="workflow-of-pihm-system.html"><a href="workflow-of-pihm-system.html"><i class="fa fa-check"></i><b>2</b> Workflow of PIHM System</a></li>
+<li class="chapter" data-level="3" data-path="install-pihm-and-pihmgisr.html"><a href="install-pihm-and-pihmgisr.html"><i class="fa fa-check"></i><b>3</b> Install PIHM and PIHMgisR</a><ul>
+<li class="chapter" data-level="3.1" data-path="install-pihm-and-pihmgisr.html"><a href="install-pihm-and-pihmgisr.html#sundialscvode"><i class="fa fa-check"></i><b>3.1</b> SUNDIALS/CVODE</a></li>
+<li class="chapter" data-level="3.2" data-path="install-pihm-and-pihmgisr.html"><a href="install-pihm-and-pihmgisr.html#pihm"><i class="fa fa-check"></i><b>3.2</b> PIHM</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="install-pihm-and-pihmgisr.html"><a href="install-pihm-and-pihmgisr.html#openmp"><i class="fa fa-check"></i><b>3.2.1</b> OpenMP</a></li>
+<li class="chapter" data-level="3.2.2" data-path="install-pihm-and-pihmgisr.html"><a href="install-pihm-and-pihmgisr.html#run-pihm-executables."><i class="fa fa-check"></i><b>3.2.2</b> Run pihm executables.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="install-pihm-and-pihmgisr.html"><a href="install-pihm-and-pihmgisr.html#pihmgisr"><i class="fa fa-check"></i><b>3.3</b> PIHMgisR</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="input-and-output.html"><a href="input-and-output.html"><i class="fa fa-check"></i><b>4</b> Input and output</a><ul>
+<li class="chapter" data-level="4.1" data-path="input-and-output.html"><a href="input-and-output.html#spatial-data"><i class="fa fa-check"></i><b>4.1</b> Spatial data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="input-and-output.html"><a href="input-and-output.html#sp.mesh-file"><i class="fa fa-check"></i><b>4.1.1</b> .sp.mesh file</a></li>
+<li class="chapter" data-level="4.1.2" data-path="input-and-output.html"><a href="input-and-output.html#sp.att-file"><i class="fa fa-check"></i><b>4.1.2</b> .sp.att file</a></li>
+<li class="chapter" data-level="4.1.3" data-path="input-and-output.html"><a href="input-and-output.html#sp.riv-file"><i class="fa fa-check"></i><b>4.1.3</b> .sp.riv file</a></li>
+<li class="chapter" data-level="4.1.4" data-path="input-and-output.html"><a href="input-and-output.html#sp.rivchn-file"><i class="fa fa-check"></i><b>4.1.4</b> .sp.rivchn file</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="input-and-output.html"><a href="input-and-output.html#model-configuration-files"><i class="fa fa-check"></i><b>4.2</b> Model configuration files</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="input-and-output.html"><a href="input-and-output.html#cfg.para-file"><i class="fa fa-check"></i><b>4.2.1</b> .cfg.para file</a></li>
+<li class="chapter" data-level="4.2.2" data-path="input-and-output.html"><a href="input-and-output.html#cfg.calib-file"><i class="fa fa-check"></i><b>4.2.2</b> .cfg.calib file</a></li>
+<li class="chapter" data-level="4.2.3" data-path="input-and-output.html"><a href="input-and-output.html#cfg.ic-file"><i class="fa fa-check"></i><b>4.2.3</b> .cfg.ic file</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="input-and-output.html"><a href="input-and-output.html#time-series-data"><i class="fa fa-check"></i><b>4.3</b> Time-series data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="input-and-output.html"><a href="input-and-output.html#tsd.forc-file"><i class="fa fa-check"></i><b>4.3.1</b> .tsd.forc file</a></li>
+<li class="chapter" data-level="4.3.2" data-path="input-and-output.html"><a href="input-and-output.html#tsd.lai-file"><i class="fa fa-check"></i><b>4.3.2</b> .tsd.lai file</a></li>
+<li class="chapter" data-level="4.3.3" data-path="input-and-output.html"><a href="input-and-output.html#tsd.rl-file"><i class="fa fa-check"></i><b>4.3.3</b> .tsd.rl file</a></li>
+<li class="chapter" data-level="4.3.4" data-path="input-and-output.html"><a href="input-and-output.html#tsd.mf-file"><i class="fa fa-check"></i><b>4.3.4</b> .tsd.mf file</a></li>
+<li class="chapter" data-level="4.3.5" data-path="input-and-output.html"><a href="input-and-output.html#tsd.obs-file"><i class="fa fa-check"></i><b>4.3.5</b> .tsd.obs file</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-1-vauclin-experiment"><i class="fa fa-check"></i><b>5.1</b> Example 1: Vauclin Experiment</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-2-shall-hill-czo"><i class="fa fa-check"></i><b>5.2</b> Example 2: Shall Hill CZO</a></li>
+<li class="chapter" data-level="5.3" data-path="applications.html"><a href="applications.html#example-3-conestoga-watershed-pennsylvanis"><i class="fa fa-check"></i><b>5.3</b> Example 3: Conestoga Watershed, Pennsylvanis</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="automatic-hydrologic-modeling-with-pihm-system.html"><a href="automatic-hydrologic-modeling-with-pihm-system.html"><i class="fa fa-check"></i><b>6</b> Automatic hydrologic modeling with PIHM system</a></li>
+<li class="chapter" data-level="7" data-path="course-code-and-program-design.html"><a href="course-code-and-program-design.html"><i class="fa fa-check"></i><b>7</b> Course code and program design</a></li>
+<li class="divider"></li>
+<li><a href="mailto:<Lele Shu>lele.shu@gmail.com" target="blank">Contact us</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Penn State Integrated Hydrologic Model(PIHM)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Penn State Integrated Hydrologic Model(PIHM)</h1>
+<h2 class="subtitle"><em>Technical Documentation</em></h2>
+<p class="author"><em>Lele Shu</em></p>
+<p class="date"><em>2019-05-03</em></p>
+</div>
+<div id="Overview" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Overview</h1>
+<p>This is the technical documentation of PIHM system (PIHM and PIHMgisR).</p>
+<p><strong>PIHM</strong> The Penn State Integrated Hydrologic Model (PIHM) is a multiprocess, multi-scale hydrologic model where the major hydrological processes are fully coupled using the semi-discrete Finite Volume Method.</p>
+<p><strong>PIHMGIS</strong> The model itself is “tightly-coupled” with PIHMgis, an open-source Geographical Information System designed for PIHM. The PIHMgis provides the access to the digital data sets (terrain, forcing and parameters) and tools necessary to drive the model, as well as a collection of GIS-based pre- and post-processing tools.</p>
+<p>Collectively the system is referred to as the <strong>Penn State Integrated Hydrologic Modeling System (PIHMS)</strong>.</p>
+<p>The PIHM is an open source software, freely available for download at <a href="www.pihm.psu.edu">PIHM website</a> or <a href="https://github.com/shulele/PIHM++">Github Page</a> along with installation and user guides.</p>
+<div id="why-pihm" class="section level2">
+<h2><span class="header-section-number">1.1</span> Why PIHM?</h2>
+<p>It is our intention to begin a debate on the role of <em>Community Models</em> in the hydrologic sciences. Our research is a response to recent trends in US funding for <em>Observatory Science</em> that have emerged at NSF over the last few years, namely, the NSF-funded <strong>CUAHSI</strong> program (Consortium of Universities for Advanicing Hydrologic Sciences).</p>
+<p>PIHM represents our strategy for the synthesis of <em>multi-state</em>, <em>multiscale</em> distributed hydrologic models using the integral representation of the underlying physical process equations and state variables.</p>
+<p>Our interest is in devising a concise representation of watershed and/or river basin hydrodynamics, which allows interactions among major physical processes operating simultaneously, but with the flexibility to add or eliminate states/processes/constitutive relations depending on the objective of the numerical experiment or purpose of the scientific or operational application.</p>
+<p>To satisfy the objectives, the PIHM</p>
+<ul>
+<li>is distributed hydrologic model, based on the semi-discrete <strong>Finite Volume Method (FVM)</strong> in which domain discretization is an unstructured triangular irregular network (e.g. Delaunay triangles) generated with constraints (geometric, and parametric). A local prismatic control volume is formed by vertical projection of the Delauney triangles forming each layer of the model. Given a set of constraints (e.g. river network support, watershed boundary, altitude zones, ecological regions, hydraulic properties, climate zones, etc), an “optimal” mesh is generated. River volume elements are also prismatic, with trapezoidal or rectangular cross-section, and are generated along or cross edges of Delauney triangles. The local control volume contains all equations to be solved and is referred to as the model kernel.</li>
+<li>is physically-based model, in which all equations used is descibing the physics of the hydrological processes which control the catchment. The physical model is ablr to predict the water in ungage water system, to estimate the sediment, pullutants and vegetation etc, such that it is practical to be coupled with biochemistry, geomorphology, limnology and other water-related research. The global ODE system is assembled by combining all local ODE systems throughout the domain and then solved by a state-of-the-art parallel ODE solver known as CVODE developed at the Lawrence Livermore National Laboratory.</li>
+<li>is fully-couple hydrologic model, where the state and flux variables in the hydrologic system are solved within same time step and conserve the mass. The fluxes are infiltration, overland flow, groundwater recharge, lateral groundwater flow, exchange of river and soil/groundwater and river discharge.</li>
+<li>is adaptable temporal and spatial resolution. The spatial resolution of model varies from meters to kilometers based requirement of modeling and computing resources. Internal time step of iteration step are adjustable; it is able to export the status of catchment in less 1 sencond to days. Also the time interval for exporting results is configured flexiblly. The flexible spatial and temporal resolution is rather valueable for community model coupling.</li>
+<li>is open source model, anyone can access the source code, use and submit their improvement.</li>
+<li>is long-term yield and single-event flood model.</li>
+</ul>
+<p>An important partnership and motivation for this work was the Project Leaders participation in two community-science research activites over the last few years: The University of Arizona-led Science and Technology Center (SAHRA: Sustainability of Water Resources in Semi- Arid Regions), and the Chesapeake Community Modeling Project (CCMP). Each of these research programs has been essential to supporting the concept of <strong>Community Models</strong> for environmental prediction and helping to make it happen.</p>
+</div>
+<div id="history-of-pihm-system" class="section level2">
+<h2><span class="header-section-number">1.2</span> History of PIHM system</h2>
+<ul>
+<li>2005 PIHM v1.0</li>
+</ul>
+<p>Dr Yizhong Qu <span class="citation">(Qu and Duffy <a href="#ref-Qu2007">2007</a>)</span> developed and verified the first version of PIHM in 2001-2005 during his PhD in Pennsylvania State Unversity, following the blueprint of Freeze and Harlan (1969). This version of PIHM is the soul of the PIHM model.</p>
+<ul>
+<li>2009 PIHMgis</li>
+</ul>
+<p>Dr. Gopal Bhartt <span class="citation">(Bhatt <a href="#ref-Bhatt2012">2012</a>)</span> developed the PIHMgis with support of C++, Qt GUI library, TRIANGLE library and QGIS developing kit. The developmemnt of PIHMgis make the learning curve of PIHM moderate and benefits the developing, modeling and coupling.</p>
+<ul>
+<li>2015 MM-PIHM</li>
+</ul>
+<p>Dr. Yuninh Shi led and developed the MM-PIHM (Multi-Module PIHM), which embeded the all modules from PIHM family, such as RT-PIHM, LE-PIHM, flux-PIHM, BGC-PIHM etc. together. The sophysiticated design and coupling of the MM-PIHM is the summit of the PIHM as a <em>Community Model</em> that combined all water-related module together.</p>
+<ul>
+<li>2019 PIHM++</li>
+</ul>
+<p>Based on the accumulated contribution of PIHM modeling and coupling with related researches, it is neccessary to solve the known bugs and limitation, improve the performance of model with parrellel methods, and adopt new update from SUNDIALS solver and programming strategy.</p>
+<p>Several publications that may helps:</p>
+<ul>
+<li><span class="citation">(Qu <a href="#ref-Qu2004">2004</a>)</span></li>
+<li><span class="citation">(Qu and Duffy <a href="#ref-Qu2007">2007</a>)</span></li>
+<li><span class="citation">(Li <a href="#ref-Li2008">2008</a>)</span></li>
+<li><span class="citation">(Kumar, Duffy, and Reed <a href="#ref-Kumar2004a">2004</a>)</span></li>
+<li><span class="citation">(Kumar, Bhatt, and Duffy <a href="#ref-Kumar2009d">2009</a>)</span></li>
+<li><span class="citation">(Yu et al. <a href="#ref-Yu2015">2015</a>)</span></li>
+<li><span class="citation">(Yu et al. <a href="#ref-Yu2014">2014</a>)</span></li>
+<li><span class="citation">(Li and Duffy <a href="#ref-Li2011">2011</a>)</span></li>
+<li><span class="citation">(Shi, Baldwin, et al. <a href="#ref-Shi2015">2015</a>)</span></li>
+<li><span class="citation">(Shi, Davis, et al. <a href="#ref-Shi2015a">2015</a>)</span></li>
+<li><span class="citation">(Bhatt, Kumar, and Duffy <a href="#ref-Bhatt2014">2014</a>)</span></li>
+</ul>
+</div>
+<div id="steps-of-pihm-modeling" class="section level2">
+<h2><span class="header-section-number">1.3</span> Steps of PIHM modeling</h2>
+<div id="essential-terrestrial-variables" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Essential Terrestrial Variables?</h3>
+<ul>
+<li>Atmospheric forcing (precipitation, snow cover, wind, relative humidity, temperature, net radiation, albedo, photosynthestic atmospheric radiation, leaf area index)</li>
+<li>Digital elevation model (DEM)</li>
+<li>River/stream discharge</li>
+<li>Soil (class, hydrologic properties)</li>
+<li>Groundwater (levels, extent, hydro-geologic properties)</li>
+<li>Lake/Reservoir (levels, extent)</li>
+<li>Land cover and land use (biomass, human infrastructure, demography, ecosystem disturbance)</li>
+<li>Water use</li>
+</ul>
+<p>Most data reside on federal servers ….many petabytes</p>
+</div>
+<div id="a-priori-data-sources" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> A-Priori Data Sources</h3>
+<table style="width:79%;">
+<colgroup>
+<col width="12%" />
+<col width="20%" />
+<col width="45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Feature/Time-Series</th>
+<th align="center">Property</th>
+<th align="center">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Soil</td>
+<td align="center">Porosity; Sand, Silt, Clay Fractions; Bulk Density</td>
+<td align="center">CONUS, SSURGO and STATSGO</td>
+</tr>
+<tr class="even">
+<td align="center">Geology</td>
+<td align="center">Bed Rock Depth; Horizontal and Vertical Hydraulic Conductivity</td>
+<td align="center"><a href="http://www.dcnr.state.pa.us/topogeo/" class="uri">http://www.dcnr.state.pa.us/topogeo/</a>, <a href="http://www.lias.psu.edu/emsl/guides/X.html" class="uri">http://www.lias.psu.edu/emsl/guides/X.html</a></td>
+</tr>
+<tr class="odd">
+<td align="center">Land Cover</td>
+<td align="center">LAI</td>
+<td align="center"><a href="http://glcf.umiacs.umd.edu/data/landcover/data.shtml">UMC</a>, <a href="http://ldas.gsfc.nasa.gov/LDAS8th/MAPPED.VEG/LDASmapveg.shtml">LDASmapveg</a>;</td>
+</tr>
+<tr class="even">
+<td align="center">Land Cover</td>
+<td align="center">Manning’s Roughness;</td>
+<td align="center">Hernandez et. al., 2000</td>
+</tr>
+<tr class="odd">
+<td align="center">River</td>
+<td align="center">Manning’s Roughness;</td>
+<td align="center">Dingman (2002)</td>
+</tr>
+<tr class="even">
+<td align="center">River</td>
+<td align="center">Coefficient of Discharge</td>
+<td align="center">ModHms Manual (Panday and Huyakorn, 2004)</td>
+</tr>
+<tr class="odd">
+<td align="center">River</td>
+<td align="center">Shape and Dimensions;</td>
+<td align="center">Derived from regression using depth, width and discharge data from <a href="http://nwis.waterdata.usgs.gov/usa/nwis/measurements">USGS data</a></td>
+</tr>
+<tr class="even">
+<td align="center">River</td>
+<td align="center">Topology: Nodes, Neighboring Elements;</td>
+<td align="center">Derived using PIHMgis (Bhatt et. al., 2008)</td>
+</tr>
+<tr class="odd">
+<td align="center">Forcing</td>
+<td align="center">Prec, Temp. RH, Wind, Rad.</td>
+<td align="center">National Land Data Assimilation System : NLDAS-2</td>
+</tr>
+<tr class="even">
+<td align="center">Topography</td>
+<td align="center">DEM</td>
+<td align="center"><a href="http://seamless.usgs.gov/" class="uri">http://seamless.usgs.gov/</a></td>
+</tr>
+<tr class="odd">
+<td align="center">Streamflow</td>
+<td align="center"></td>
+<td align="center"><a href="http://nwis.waterdata.usgs.gov/nwis/sw" class="uri">http://nwis.waterdata.usgs.gov/nwis/sw</a></td>
+</tr>
+<tr class="even">
+<td align="center">Groundwater</td>
+<td align="center"></td>
+<td align="center"><a href="http://nwis.waterdata.usgs.gov/nwis/gw" class="uri">http://nwis.waterdata.usgs.gov/nwis/gw</a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Qu2007">
+<p>Qu, Yizhong, and Christopher J. Duffy. 2007. “A semidiscrete finite volume formulation for multiprocess watershed simulation.” <em>Water Resources Research</em> 43 (8): 1–18. doi:<a href="https://doi.org/10.1029/2006WR005752">10.1029/2006WR005752</a>.</p>
+</div>
+<div id="ref-Bhatt2012">
+<p>Bhatt, Gopal. 2012. “A distributed hydrologic modeling system: Framework for discovery and management of water resources.” PhD thesis, Pennsylvania State University.</p>
+</div>
+<div id="ref-Qu2004">
+<p>Qu, Yizhong. 2004. “An integrated hydrologic model for multi-process simulation using semi-discrete finite volume approach.” PhD thesis. <a href="http://gradworks.umi.com/31/72/3172997.html" class="uri">http://gradworks.umi.com/31/72/3172997.html</a>.</p>
+</div>
+<div id="ref-Li2008">
+<p>Li, Shuangcai. 2008. “INTEGRATED MODELING OF MULTI-SCALE HYDRODYNAMICS, SEDIMENT AND POLLUTANT TRANSPORT.” PhD thesis.</p>
+</div>
+<div id="ref-Kumar2004a">
+<p>Kumar, M, C J Duffy, and P M Reed. 2004. “Enhancing the performance of feature selection algorithms for classifying hyperspectral imagery.” In <em>Geoscience and Remote Sensing Symposium, 2004. Igarss ’04. Proceedings. 2004 Ieee International</em>, 5:3264–7 vol.5. C. doi:<a href="https://doi.org/10.1109/IGARSS.2004.1370398">10.1109/IGARSS.2004.1370398</a>.</p>
+</div>
+<div id="ref-Kumar2009d">
+<p>Kumar, Mukesh, Gopal Bhatt, and Christopher J. Duffy. 2009. “An efficient domain decomposition framework for accurate representation of geodata in distributed hydrologic models.” <em>International Journal of Geographical Information Science</em> 23 (12). Taylor &amp; Francis Ltd: 1569–96. doi:<a href="https://doi.org/10.1080/13658810802344143">10.1080/13658810802344143</a>.</p>
+</div>
+<div id="ref-Yu2015">
+<p>Yu, Xuan, Anna Lamačová, Christopher Duffy, Pavel Krám, and Jakub Hruška. 2015. “Hydrological model uncertainty due to spatial evapotranspiration estimation methods.” <em>Computers &amp; Geosciences</em> 90: 90–101. doi:<a href="https://doi.org/10.1016/j.cageo.2015.05.006">10.1016/j.cageo.2015.05.006</a>.</p>
+</div>
+<div id="ref-Yu2014">
+<p>Yu, Xuan, Christopher Duffy, Doug C. Baldwin, and Henry Lin. 2014. “The role of macropores and multi-resolution soil survey datasets for distributed surface-subsurface flow modeling.” <em>Journal of Hydrology</em> 516. Elsevier B.V.: 97–106. doi:<a href="https://doi.org/10.1016/j.jhydrol.2014.02.055">10.1016/j.jhydrol.2014.02.055</a>.</p>
+</div>
+<div id="ref-Li2011">
+<p>Li, Shuangcai, and Christopher J. Duffy. 2011. “Fully coupled approach to modeling shallow water flow, sediment transport, and bed evolution in rivers.” <em>Water Resources Research</em> 47 (3): 1–20. doi:<a href="https://doi.org/10.1029/2010WR009751">10.1029/2010WR009751</a>.</p>
+</div>
+<div id="ref-Shi2015">
+<p>Shi, Yuning, Douglas C. Baldwin, Kenneth J. Davis, Xuan Yu, Christopher J. Duffy, and Henry Lin. 2015. “Simulating high-resolution soil moisture patterns in the Shale Hills watershed using a land surface hydrologic model.” <em>Hydrological Processes</em> 29 (21): 4624–37. doi:<a href="https://doi.org/10.1002/hyp.10593">10.1002/hyp.10593</a>.</p>
+</div>
+<div id="ref-Shi2015a">
+<p>Shi, Yuning, Kenneth J. Davis, Fuqing Zhang, Christopher J. Duffy, and Xuan Yu. 2015. “Parameter estimation of a physically-based land surface hydrologic model using an ensemble Kalman filter: A multivariate real-data experiment.” <em>Advances in Water Resources</em> 83. Elsevier Ltd.: 421–27. doi:<a href="https://doi.org/10.1016/j.advwatres.2015.06.009">10.1016/j.advwatres.2015.06.009</a>.</p>
+</div>
+<div id="ref-Bhatt2014">
+<p>Bhatt, Gopal, Mukesh Kumar, and Christopher J. Duffy. 2014. “A tightly coupled GIS and distributed hydrologic modeling framework.” <em>Environmental Modelling and Software</em> 62. Elsevier Ltd: 70–84. doi:<a href="https://doi.org/10.1016/j.envsoft.2014.08.003">10.1016/j.envsoft.2014.08.003</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="workflow-of-pihm-system.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["PIHM_Tech.pdf", "PIHM_Tech.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

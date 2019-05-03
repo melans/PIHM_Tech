@@ -37,8 +37,8 @@ ccmake
 ```
 ccmake /Users/leleshu/Dropbox/PIHM/sundials/cvode-4.1.0
 ```
-![Screen short of Step 1 in ccmake](Fig/ccmake/1.png)
-This is a empty configure. Press `c` to start the configuration.
+![Screenshot of Step 1 in ccmake](Fig/ccmake/1.png)
+This is an empty configure. Press `c` to start the configuration.
 
 ![Screen short of Step 2 in ccmake](Fig/ccmake/2.png)
 The default configuration. Make sure the value for three lines:
@@ -49,8 +49,8 @@ EXAMPLES_INSTALL_PATH = /usr/local/sundials/examples
 ```
 After the modification of values, press `c` to confirm configuration.
 
-![Screen short of Step 3 in ccmake](Fig/ccmake/3.png)
-The ccmake configures the environment automatically. When the configuration is ready, press `g` to genrate and exit.
+![Screenshot of Step 3 in ccmake](Fig/ccmake/3.png)
+The ccmake configures the environment automatically. When the configuration is ready, press `g` to generate and exit.
 
 1. Then you run commands below:
 ```
@@ -118,7 +118,7 @@ Command line pattern is:
 
 
 When the `pihm++` program starts to run, the screen should look like this:
-![Screen print of pihm++ running. Example project name is *sh*.](Fig/CLI_SH.png)
+![Screen print of pihm++ running. The example project name is *sh*.](Fig/CLI_SH.png)
 
 ## PIHMgisR
 This PIHMgisR is an R package. What you need is to install the package as a source code package.

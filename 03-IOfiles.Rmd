@@ -24,9 +24,9 @@ List of input files:
 | gis/river | Shapefile | Shapefile of .riv file | x | x |
 | gis/seg | Shapefile | Shapefile of .rivchn file   | x | x |
 
-![The screenshort of input files for PIHM++](Fig/IO/Inputfiles.png)
+![The screenshot of input files for PIHM++](Fig/IO/Inputfiles.png)
 
-The files in folder gis and fig are not involved in PIHM modeling, but they are very useful for your data pre- and post-processing. 
+The files in folder *gis* and *fig* are not involved in PIHM modeling, but they are very useful for your data pre- and post-processing. 
 
 
 ## Spatial data
@@ -35,7 +35,7 @@ The files in folder gis and fig are not involved in PIHM modeling, but they are 
 
 ![Example of .sp.mesh file (block 1)](Fig/IO/sp.mesh1.png)
 ![Example of .sp.mesh file (block 2)](Fig/IO/sp.mesh2.png)
-There are two tables in the .mesh file, the one is table of elements and the other is table of nodes of elements.
+There are two tables in the .mesh file, the one is a table of elements and the other is a table of nodes of elements.
 
 * **Block 1 (Element information)**
 
@@ -152,7 +152,7 @@ There are two tables in the .mesh file, the one is table of elements and the oth
 - Table
   
 | Colname | Meaning | Range | Unit | Comments |
- |:------:|:------------------:|:------:|:------:|:---------------------:|
+ |:-------------:|:------------------:|:------:|:------:|:---------------------:|
 | VERBOSE| Verbose mode | - | - | |  
 | DEBUG| Debug mode | - | - | |  
 | INIT_MODE| Initial condition mode | 1,2,3| - | 1=Dry condition, 2=Relief conditon, 3=Warm start|  
@@ -279,7 +279,7 @@ There are two tables in the .mesh file, the one is table of elements and the oth
 ![Example of .tsd.forc file](Fig/IO/tsd.forc.png)
 
 - Line 1: `Number of forcing sites | Start day (YYYYMMDD)`
-- Line 2: Directory to spreadsheet
+- Line 2: Directory to the spreadsheet
 - Line 3~N: Filenames of spreadsheet
 
 
