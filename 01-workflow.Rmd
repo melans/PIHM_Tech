@@ -1,0 +1,9 @@
+
+# Workflow of PIHM System
+
+![The workflow of modeling with PIHM System](./Fig/Workflow.png)
+
+1. Prepare raw Essential Terrestrial Variables (ETV)
+1. Build the PIHM modeling domain with [PIHMgis](http://www.pihm.psu.edu/pihmgis_home.html) or [PIHMgisR](https://github.com/shulele/PIHMgisR) (recommended for PIHM++)
+1. Run PIHM on desktop or cluster.
+1. Analysis the PIHM results with

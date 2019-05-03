@@ -1,0 +1,10 @@
+# Applications
+
+Some _significant_ applications are demonstrated in this chapter.
+
+
+## Example 1: Vauclin Experiment
+
+## Example 2: Shall Hill CZO
+
+## Example 3: Conestoga Watershed, Pennsylvanis

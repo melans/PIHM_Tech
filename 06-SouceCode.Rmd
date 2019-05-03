@@ -1,0 +1,5 @@
+# Course code and program design
+
+The source code of PIHM++ and PIHMgisR are avaliable via Github: https://github.com/shulele/PIHM-4.0 and https://github.com/shulele/PIHMgisR.
+
+
