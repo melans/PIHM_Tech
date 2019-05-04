@@ -74,7 +74,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{Technical Documentation}
 \author{Lele Shu}
-\date{2019-05-03}
+\date{2019-05-04}
 
 \begin{document}
 \maketitle
@@ -412,12 +412,16 @@ Groundwater\strut
 \item
   Convert and crop raw data with the research area boundary.
 \item
-  Build the PIHM modeling domain with PIHMgis or PIHMgisR (recommended
-  for PIHM++)
+  Build the PIHM modeling domain with
+  \href{http://www.pihm.psu.edu/pihmgis_home.html}{PIHMgis} or
+  \href{https://github.com/shulele/PIHMgisR}{PIHMgisR} (Recommended for
+  PIHM++)
 \item
   Run PIHM on desktop or cluster.
 \item
-  Analysis the PIHM results with PIHMgisR.
+  Analysis the PIHM results with
+  \href{https://github.com/shulele/PIHMgisR}{PIHMgisR} or your
+  hydrologic analysis tools.
 \end{enumerate}
 
 \chapter{Install PIHM and PIHMgisR}\label{install-pihm-and-pihmgisr}
@@ -1530,6 +1534,48 @@ Stage & Stage of river \(i\) & 0 \textasciitilde{} inf & \(m\)
 \item
   Line 3\textasciitilde{}N: Filenames of spreadsheet
 \end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{Fig/IO/tsd.csv.png}
+\caption{Example of .csv forcing file}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Pre-table:
+\end{itemize}
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+Value1 & Value2\tabularnewline
+\midrule
+\endhead
+( \(0\)) & Number of columns (\(6\))\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  Table
+\end{itemize}
+
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule
+Colname & Meaning & Range & Unit & Comments\tabularnewline
+\midrule
+\endhead
+Day & Time & 0 \textasciitilde{} \(N_{day}\) & \(day\) &\tabularnewline
+PRCP & Precipitation & 0 \textasciitilde{} 1 & \(m/day\)
+&\tabularnewline
+TEMP & Temperature & -100 \textasciitilde{} 70 & \(C\) &\tabularnewline
+RH & Relative Humidity & 0 \textasciitilde{} 1 & \(-\) &\tabularnewline
+wind & Wind Speed & 0 \textasciitilde{} inf & \(m/day\) &\tabularnewline
+Rn & Solar (shortwave) radiation & ? & \(J/day/m^2\) &\tabularnewline
+\bottomrule
+\end{longtable}
 
 \subsection{.tsd.lai file}\label{tsd.lai-file}
 

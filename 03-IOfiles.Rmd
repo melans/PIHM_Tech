@@ -283,6 +283,26 @@ There are two tables in the .mesh file, the one is a table of elements and the o
 - Line 3~N: Filenames of spreadsheet
 
 
+![Example of .csv forcing file](Fig/IO/tsd.csv.png)
+
+- Pre-table:
+
+| Value1 | Value2 | 
+|:---------:|:---------:|
+| ( $0$) | Number of columns ($6$) |
+
+- Table
+  
+| Colname | Meaning | Range | Unit | Comments |
+ |:------:|:------------------:|:------:|:------:|:---------------------:|
+| Day | Time |  0 ~ $N_{day}$ | $day$ | |
+| PRCP | Precipitation  |  0 ~ 1 | $m/day$ | |
+| TEMP | Temperature  |  -100 ~ 70 | $C$ | |
+| RH | Relative Humidity |  0 ~ 1 | $-$ | |
+| wind | Wind Speed |  0 ~ inf | $m/day$ | |
+| Rn | Solar (shortwave) radiation |  ? | $J/day/m^2$ | |
+
+
 ### .tsd.lai file
 
 ![Example of .tsd.lai file](Fig/IO/tsd.lai.png)

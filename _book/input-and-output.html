@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 4 Input and output | PIHMS technical documentation</title>
+  <title>Chapter 4 Input and output | Penn State Integrated Hydrologic Model(PIHM)</title>
   <meta name="description" content="PIHM technical documentation">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 4 Input and output | PIHMS technical documentation" />
+  <meta property="og:title" content="Chapter 4 Input and output | Penn State Integrated Hydrologic Model(PIHM)" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Input and output | PIHMS technical documentation" />
+  <meta name="twitter:title" content="Chapter 4 Input and output | Penn State Integrated Hydrologic Model(PIHM)" />
   
   <meta name="twitter:description" content="PIHM technical documentation" />
   
@@ -25,7 +25,7 @@
 <meta name="author" content="Lele Shu">
 
 
-<meta name="date" content="2019-05-02">
+<meta name="date" content="2019-05-04">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -69,9 +69,10 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-pihm"><i class="fa fa-check"></i><b>1.1</b> Why PIHM?</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#history-of-pihm-system"><i class="fa fa-check"></i><b>1.2</b> History of PIHM system</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#essential-terrestrial-variables"><i class="fa fa-check"></i><b>1.2.1</b> Essential Terrestrial Variables?</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#a-priori-data-sources"><i class="fa fa-check"></i><b>1.2.2</b> A-Priori Data Sources</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#history-of-pihm-system"><i class="fa fa-check"></i><b>1.2</b> History of PIHM system</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#steps-of-pihm-modeling"><i class="fa fa-check"></i><b>1.3</b> Steps of PIHM modeling</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#essential-terrestrial-variables"><i class="fa fa-check"></i><b>1.3.1</b> Essential Terrestrial Variables?</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#a-priori-data-sources"><i class="fa fa-check"></i><b>1.3.2</b> A-Priori Data Sources</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="workflow-of-pihm-system.html"><a href="workflow-of-pihm-system.html"><i class="fa fa-check"></i><b>2</b> Workflow of PIHM System</a></li>
@@ -109,6 +110,7 @@
 <li class="chapter" data-level="5.3" data-path="applications.html"><a href="applications.html#example-3-conestoga-watershed-pennsylvanis"><i class="fa fa-check"></i><b>5.3</b> Example 3: Conestoga Watershed, Pennsylvanis</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="automatic-hydrologic-modeling-with-pihm-system.html"><a href="automatic-hydrologic-modeling-with-pihm-system.html"><i class="fa fa-check"></i><b>6</b> Automatic hydrologic modeling with PIHM system</a></li>
+<li class="chapter" data-level="7" data-path="course-code-and-program-design.html"><a href="course-code-and-program-design.html"><i class="fa fa-check"></i><b>7</b> Course code and program design</a></li>
 <li class="divider"></li>
 <li><a href="mailto:<Lele Shu>lele.shu@gmail.com" target="blank">Contact us</a></li>
 
@@ -121,7 +123,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PIHMS technical documentation</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Penn State Integrated Hydrologic Model(PIHM)</a>
           </h1>
         </div>
 
@@ -279,15 +281,15 @@
 </tbody>
 </table>
 <div class="figure">
-<img src="Fig/IO/Inputfiles.png" alt="The screenshort of input files for PIHM++" />
-<p class="caption">The screenshort of input files for PIHM++</p>
+<img src="Fig/IO/Inputfiles.png" alt="The screenshot of input files for PIHM++" />
+<p class="caption">The screenshot of input files for PIHM++</p>
 </div>
-<p>The files in folder gis and fig are not involved in PIHM modeling, but they are very useful for your data pre- and post-processing.</p>
+<p>The files in folder <em>gis</em> and <em>fig</em> are not involved in PIHM modeling, but they are very useful for your data pre- and post-processing.</p>
 <div id="spatial-data" class="section level2">
 <h2><span class="header-section-number">4.1</span> Spatial data</h2>
 <div id="sp.mesh-file" class="section level3">
 <h3><span class="header-section-number">4.1.1</span> .sp.mesh file</h3>
-<p><img src="Fig/IO/sp.mesh1.png" alt="Example of .sp.mesh file (block 1)" /> <img src="Fig/IO/sp.mesh2.png" alt="Example of .sp.mesh file (block 2)" /> There are two tables in the .mesh file, the one is table of elements and the other is table of nodes of elements.</p>
+<p><img src="Fig/IO/sp.mesh1.png" alt="Example of .sp.mesh file (block 1)" /> <img src="Fig/IO/sp.mesh2.png" alt="Example of .sp.mesh file (block 2)" /> There are two tables in the .mesh file, the one is a table of elements and the other is a table of nodes of elements.</p>
 <ul>
 <li><p><strong>Block 1 (Element information)</strong></p></li>
 <li><p>Pre-table</p></li>
@@ -699,13 +701,13 @@
 <ul>
 <li>Table</li>
 </ul>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col width="12%" />
-<col width="29%" />
-<col width="12%" />
-<col width="12%" />
-<col width="33%" />
+<col width="20%" />
+<col width="26%" />
+<col width="11%" />
+<col width="11%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1347,9 +1349,95 @@
 </div>
 <ul>
 <li>Line 1: <code>Number of forcing sites | Start day (YYYYMMDD)</code></li>
-<li>Line 2: Directory to spreadsheet</li>
+<li>Line 2: Directory to the spreadsheet</li>
 <li>Line 3~N: Filenames of spreadsheet</li>
 </ul>
+<div class="figure">
+<img src="Fig/IO/tsd.csv.png" alt="Example of .csv forcing file" />
+<p class="caption">Example of .csv forcing file</p>
+</div>
+<ul>
+<li>Pre-table:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Value1</th>
+<th align="center">Value2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">( <span class="math inline">\(0\)</span>)</td>
+<td align="center">Number of columns (<span class="math inline">\(6\)</span>)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Table</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Colname</th>
+<th align="center">Meaning</th>
+<th align="center">Range</th>
+<th align="center">Unit</th>
+<th align="center">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Day</td>
+<td align="center">Time</td>
+<td align="center">0 ~ <span class="math inline">\(N_{day}\)</span></td>
+<td align="center"><span class="math inline">\(day\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">PRCP</td>
+<td align="center">Precipitation</td>
+<td align="center">0 ~ 1</td>
+<td align="center"><span class="math inline">\(m/day\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">TEMP</td>
+<td align="center">Temperature</td>
+<td align="center">-100 ~ 70</td>
+<td align="center"><span class="math inline">\(C\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">RH</td>
+<td align="center">Relative Humidity</td>
+<td align="center">0 ~ 1</td>
+<td align="center"><span class="math inline">\(-\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">RH</td>
+<td align="center">Relative Humidity</td>
+<td align="center">0 ~ 1</td>
+<td align="center"><span class="math inline">\(-\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">wind</td>
+<td align="center">Wind Speed</td>
+<td align="center">0 ~ inf</td>
+<td align="center"><span class="math inline">\(m/day\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Rn</td>
+<td align="center">Solar (shortwave) radiation</td>
+<td align="center">?</td>
+<td align="center"><span class="math inline">\(J/day/m^2\)</span></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="tsd.lai-file" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> .tsd.lai file</h3>
