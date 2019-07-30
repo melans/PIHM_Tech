@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 7 Automatic hydrologic modeling with PIHM system | Penn State Integrated Hydrologic Model(PIHM)</title>
+  <title>Chapter 5 Output files | Penn State Integrated Hydrologic Model(PIHM)</title>
   <meta name="description" content="PIHM technical documentation">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 7 Automatic hydrologic modeling with PIHM system | Penn State Integrated Hydrologic Model(PIHM)" />
+  <meta property="og:title" content="Chapter 5 Output files | Penn State Integrated Hydrologic Model(PIHM)" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Automatic hydrologic modeling with PIHM system | Penn State Integrated Hydrologic Model(PIHM)" />
+  <meta name="twitter:title" content="Chapter 5 Output files | Penn State Integrated Hydrologic Model(PIHM)" />
   
   <meta name="twitter:description" content="PIHM technical documentation" />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="applications.html">
-<link rel="next" href="course-code-and-program-design.html">
+<link rel="prev" href="input-files.html">
+<link rel="next" href="applications.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -135,18 +135,302 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="automatic-hydrologic-modeling-with-pihm-system" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Automatic hydrologic modeling with PIHM system</h1>
-<p>Automatic deployment of PIHM System</p>
+<div id="output-files" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Output files</h1>
+<div id="output-file-names" class="section level2">
+<h2><span class="header-section-number">5.1</span> Output file names</h2>
+<p>Format of output file names:</p>
+<p><strong>[Project Name].[Identifier].[Format]</strong></p>
+<p>-The <em>[Project Name]</em> is user defined name of the project, so every input and output files must start with the <em>[Project Name]</em>. -The <em>[Format]</em> is one of <em>csv</em> or <em>dat</em>. <em>csv</em> is spreadsheet format and <em>dat</em> is bindary format.</p>
+<p>The <em>[Identifier]</em> is a combination of variables features, that in format of: <strong>[Model Unit][Variable Type][Variable Name]</strong>. <em>[Model Unit]</em> is one of three options of <em>ele</em> (elemtns), <em>riv</em> (river) or <em>lak</em> (lake). Variable type includes <em>y</em>, <em>v</em> and <em>q</em> that are state variable (in <span class="math inline">\(L\)</span>), specific flux (in <span class="math inline">\(L^3/L^2/T\)</span>) and flux (in <span class="math inline">\(L^3/T\)</span>) respectively.</p>
+<p>The list of output files is in following table.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Identifier</th>
+<th align="center">Model unit</th>
+<th align="center">Var Type</th>
+<th align="center">Var Name</th>
+<th align="center">Meaning</th>
+<th align="center">Unit</th>
+<th align="center">Old name</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><em>.eleyic.</em></td>
+<td align="center">ele</td>
+<td align="center">y</td>
+<td align="center">ic</td>
+<td align="center">Storage of Interception</td>
+<td align="center"><span class="math inline">\(m\)</span></td>
+<td align="center">.ic</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.eleysnow.</em></td>
+<td align="center">ele</td>
+<td align="center">y</td>
+<td align="center">snow</td>
+<td align="center">Storage of Interception</td>
+<td align="center"><span class="math inline">\(m\)</span></td>
+<td align="center">.snow</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.eleysurf.</em></td>
+<td align="center">ele</td>
+<td align="center">y</td>
+<td align="center">surf</td>
+<td align="center">Storage of surface</td>
+<td align="center"><span class="math inline">\(m\)</span></td>
+<td align="center">.surf</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.eleyunsat.</em></td>
+<td align="center">ele</td>
+<td align="center">y</td>
+<td align="center">unsat</td>
+<td align="center">Storage of unsaturated zone</td>
+<td align="center"><span class="math inline">\(m\)</span></td>
+<td align="center">.unsat</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.eleygw.</em></td>
+<td align="center">ele</td>
+<td align="center">y</td>
+<td align="center">gw</td>
+<td align="center">Groundwater head</td>
+<td align="center"><span class="math inline">\(m\)</span></td>
+<td align="center">.GW</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.elevetp.</em></td>
+<td align="center">ele</td>
+<td align="center">v</td>
+<td align="center">etp</td>
+<td align="center">Potential ET</td>
+<td align="center"><span class="math inline">\(\frac{m^3}{m^2 d}\)</span></td>
+<td align="center">-</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.elevetic.</em></td>
+<td align="center">ele</td>
+<td align="center">v</td>
+<td align="center">etic</td>
+<td align="center">Evaporation from interception</td>
+<td align="center"><span class="math inline">\(\frac{m^3}{m^2 d}\)</span></td>
+<td align="center">.ET0</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.elevettr.</em></td>
+<td align="center">ele</td>
+<td align="center">v</td>
+<td align="center">ettr</td>
+<td align="center">Transpiration</td>
+<td align="center"><span class="math inline">\(\frac{m^3}{m^2 d}\)</span></td>
+<td align="center">.ET1</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.elevetev.</em></td>
+<td align="center">ele</td>
+<td align="center">v</td>
+<td align="center">etev</td>
+<td align="center">Soil Evaporation</td>
+<td align="center"><span class="math inline">\(\frac{m^3}{m^2 d}\)</span></td>
+<td align="center">.ET2</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.elevprcp.</em></td>
+<td align="center">ele</td>
+<td align="center">v</td>
+<td align="center">prcp</td>
+<td align="center">Precipitation</td>
+<td align="center"><span class="math inline">\(\frac{m^3}{m^2 d}\)</span></td>
+<td align="center">-</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.elevnetprcp.</em></td>
+<td align="center">ele</td>
+<td align="center">v</td>
+<td align="center">netprcp</td>
+<td align="center">Net Precipitation</td>
+<td align="center"><span class="math inline">\(\frac{m^3}{m^2 d}\)</span></td>
+<td align="center">-</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.elevinfil.</em></td>
+<td align="center">ele</td>
+<td align="center">v</td>
+<td align="center">infil</td>
+<td align="center">Infiltration Rate</td>
+<td align="center"><span class="math inline">\(\frac{m^3}{m^2 d}\)</span></td>
+<td align="center">.infil</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.elevrech.</em></td>
+<td align="center">ele</td>
+<td align="center">v</td>
+<td align="center">rech</td>
+<td align="center">Recharge Rate</td>
+<td align="center"><span class="math inline">\(\frac{m^3}{m^2 d}\)</span></td>
+<td align="center">.Rech</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.eleqsurf.</em></td>
+<td align="center">ele</td>
+<td align="center">q</td>
+<td align="center">surf</td>
+<td align="center">Overland flow</td>
+<td align="center"><span class="math inline">\(m^3/d\)</span></td>
+<td align="center">.fluxsurf</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.eleqsub.</em></td>
+<td align="center">ele</td>
+<td align="center">q</td>
+<td align="center">sub</td>
+<td align="center">Subsurface flow</td>
+<td align="center"><span class="math inline">\(m^3/d\)</span></td>
+<td align="center">.fluxsub</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.rivystage.</em></td>
+<td align="center">riv</td>
+<td align="center">y</td>
+<td align="center">stage</td>
+<td align="center">River Stage</td>
+<td align="center"><span class="math inline">\(m\)</span></td>
+<td align="center">stage</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.rivqup.</em></td>
+<td align="center">riv</td>
+<td align="center">q</td>
+<td align="center">up</td>
+<td align="center">Water flux from upstream</td>
+<td align="center"><span class="math inline">\(m^3/d\)</span></td>
+<td align="center">.rivflx0</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><em>.rivqdown.</em></td>
+<td align="center">riv</td>
+<td align="center">q</td>
+<td align="center">down</td>
+<td align="center">Water flux to downstream</td>
+<td align="center"><span class="math inline">\(m^3/d\)</span></td>
+<td align="center">.rivflx1</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><em>.rivqsurf.</em></td>
+<td align="center">riv</td>
+<td align="center">q</td>
+<td align="center">surf</td>
+<td align="center">Water flux from landsurface</td>
+<td align="center"><span class="math inline">\(m^3/d\)</span></td>
+<td align="center">.rivflx1,2</td>
+</tr>
+<tr class="even">
+<td align="center"><em>.rivqsub.</em></td>
+<td align="center">riv</td>
+<td align="center">q</td>
+<td align="center">sub</td>
+<td align="center">Water flux from subsurface</td>
+<td align="center"><span class="math inline">\(m^3/d\)</span></td>
+<td align="center">.rivflx4~8</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="center">PIHM++</th>
+<th align="center">PIHM 2.2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">*.eleysurf.csv</td>
+<td align="center">.surf</td>
+</tr>
+<tr class="even">
+<td align="center">*.eleyunsat.csv</td>
+<td align="center">.unsat</td>
+</tr>
+<tr class="odd">
+<td align="center">*.eleysnow.csv</td>
+<td align="center">.snow</td>
+</tr>
+<tr class="even">
+<td align="center">*.eleygw.csv</td>
+<td align="center">.GW</td>
+</tr>
+<tr class="odd">
+<td align="center">*.eleyic.csv</td>
+<td align="center">.ic</td>
+</tr>
+<tr class="even">
+<td align="center">*.elevetp.csv</td>
+<td align="center">-</td>
+</tr>
+<tr class="odd">
+<td align="center">*.elevetic.csv</td>
+<td align="center">.et0</td>
+</tr>
+<tr class="even">
+<td align="center">*.elevettr.csv</td>
+<td align="center">.et1</td>
+</tr>
+<tr class="odd">
+<td align="center">*.elevetev.csv</td>
+<td align="center">.et2</td>
+</tr>
+<tr class="even">
+<td align="center">*.eleveta.csv</td>
+<td align="center">-</td>
+</tr>
+<tr class="odd">
+<td align="center">*.eleysurf.csv</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">*.eleysurf.csv</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">*.eleysurf.csv</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="applications.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="course-code-and-program-design.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="input-files.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

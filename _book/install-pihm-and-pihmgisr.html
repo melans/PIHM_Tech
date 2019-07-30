@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 3 Install PIHM and PIHMgisR | PIHMS technical documentation</title>
+  <title>Chapter 3 Install PIHM and PIHMgisR | Penn State Integrated Hydrologic Model(PIHM)</title>
   <meta name="description" content="PIHM technical documentation">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 3 Install PIHM and PIHMgisR | PIHMS technical documentation" />
+  <meta property="og:title" content="Chapter 3 Install PIHM and PIHMgisR | Penn State Integrated Hydrologic Model(PIHM)" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Install PIHM and PIHMgisR | PIHMS technical documentation" />
+  <meta name="twitter:title" content="Chapter 3 Install PIHM and PIHMgisR | Penn State Integrated Hydrologic Model(PIHM)" />
   
   <meta name="twitter:description" content="PIHM technical documentation" />
   
@@ -25,7 +25,7 @@
 <meta name="author" content="Lele Shu">
 
 
-<meta name="date" content="2019-05-02">
+<meta name="date" content="2019-07-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="workflow-of-pihm-system.html">
-<link rel="next" href="input-and-output.html">
+<link rel="next" href="input-files.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -69,9 +69,10 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-pihm"><i class="fa fa-check"></i><b>1.1</b> Why PIHM?</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#history-of-pihm-system"><i class="fa fa-check"></i><b>1.2</b> History of PIHM system</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#essential-terrestrial-variables"><i class="fa fa-check"></i><b>1.2.1</b> Essential Terrestrial Variables?</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#a-priori-data-sources"><i class="fa fa-check"></i><b>1.2.2</b> A-Priori Data Sources</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#history-of-pihm-system"><i class="fa fa-check"></i><b>1.2</b> History of PIHM system</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#steps-of-pihm-modeling"><i class="fa fa-check"></i><b>1.3</b> Steps of PIHM modeling</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#essential-terrestrial-variables"><i class="fa fa-check"></i><b>1.3.1</b> Essential Terrestrial Variables?</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#a-priori-data-sources"><i class="fa fa-check"></i><b>1.3.2</b> A-Priori Data Sources</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="workflow-of-pihm-system.html"><a href="workflow-of-pihm-system.html"><i class="fa fa-check"></i><b>2</b> Workflow of PIHM System</a></li>
@@ -83,32 +84,37 @@
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="install-pihm-and-pihmgisr.html"><a href="install-pihm-and-pihmgisr.html#pihmgisr"><i class="fa fa-check"></i><b>3.3</b> PIHMgisR</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="input-and-output.html"><a href="input-and-output.html"><i class="fa fa-check"></i><b>4</b> Input and output</a><ul>
-<li class="chapter" data-level="4.1" data-path="input-and-output.html"><a href="input-and-output.html#spatial-data"><i class="fa fa-check"></i><b>4.1</b> Spatial data</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="input-and-output.html"><a href="input-and-output.html#sp.mesh-file"><i class="fa fa-check"></i><b>4.1.1</b> .sp.mesh file</a></li>
-<li class="chapter" data-level="4.1.2" data-path="input-and-output.html"><a href="input-and-output.html#sp.att-file"><i class="fa fa-check"></i><b>4.1.2</b> .sp.att file</a></li>
-<li class="chapter" data-level="4.1.3" data-path="input-and-output.html"><a href="input-and-output.html#sp.riv-file"><i class="fa fa-check"></i><b>4.1.3</b> .sp.riv file</a></li>
-<li class="chapter" data-level="4.1.4" data-path="input-and-output.html"><a href="input-and-output.html#sp.rivchn-file"><i class="fa fa-check"></i><b>4.1.4</b> .sp.rivchn file</a></li>
+<li class="chapter" data-level="4" data-path="input-files.html"><a href="input-files.html"><i class="fa fa-check"></i><b>4</b> Input files</a><ul>
+<li class="chapter" data-level="4.1" data-path="input-files.html"><a href="input-files.html#spatial-data"><i class="fa fa-check"></i><b>4.1</b> Spatial data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="input-files.html"><a href="input-files.html#sp.mesh-file"><i class="fa fa-check"></i><b>4.1.1</b> .sp.mesh file</a></li>
+<li class="chapter" data-level="4.1.2" data-path="input-files.html"><a href="input-files.html#sp.att-file"><i class="fa fa-check"></i><b>4.1.2</b> .sp.att file</a></li>
+<li class="chapter" data-level="4.1.3" data-path="input-files.html"><a href="input-files.html#sp.riv-file"><i class="fa fa-check"></i><b>4.1.3</b> .sp.riv file</a></li>
+<li class="chapter" data-level="4.1.4" data-path="input-files.html"><a href="input-files.html#sp.rivchn-file"><i class="fa fa-check"></i><b>4.1.4</b> .sp.rivchn file</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="input-and-output.html"><a href="input-and-output.html#model-configuration-files"><i class="fa fa-check"></i><b>4.2</b> Model configuration files</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="input-and-output.html"><a href="input-and-output.html#cfg.para-file"><i class="fa fa-check"></i><b>4.2.1</b> .cfg.para file</a></li>
-<li class="chapter" data-level="4.2.2" data-path="input-and-output.html"><a href="input-and-output.html#cfg.calib-file"><i class="fa fa-check"></i><b>4.2.2</b> .cfg.calib file</a></li>
-<li class="chapter" data-level="4.2.3" data-path="input-and-output.html"><a href="input-and-output.html#cfg.ic-file"><i class="fa fa-check"></i><b>4.2.3</b> .cfg.ic file</a></li>
+<li class="chapter" data-level="4.2" data-path="input-files.html"><a href="input-files.html#model-configuration-files"><i class="fa fa-check"></i><b>4.2</b> Model configuration files</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="input-files.html"><a href="input-files.html#cfg.para-file"><i class="fa fa-check"></i><b>4.2.1</b> .cfg.para file</a></li>
+<li class="chapter" data-level="4.2.2" data-path="input-files.html"><a href="input-files.html#cfg.calib-file"><i class="fa fa-check"></i><b>4.2.2</b> .cfg.calib file</a></li>
+<li class="chapter" data-level="4.2.3" data-path="input-files.html"><a href="input-files.html#cfg.ic-file"><i class="fa fa-check"></i><b>4.2.3</b> .cfg.ic file</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="input-and-output.html"><a href="input-and-output.html#time-series-data"><i class="fa fa-check"></i><b>4.3</b> Time-series data</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="input-and-output.html"><a href="input-and-output.html#tsd.forc-file"><i class="fa fa-check"></i><b>4.3.1</b> .tsd.forc file</a></li>
-<li class="chapter" data-level="4.3.2" data-path="input-and-output.html"><a href="input-and-output.html#tsd.lai-file"><i class="fa fa-check"></i><b>4.3.2</b> .tsd.lai file</a></li>
-<li class="chapter" data-level="4.3.3" data-path="input-and-output.html"><a href="input-and-output.html#tsd.rl-file"><i class="fa fa-check"></i><b>4.3.3</b> .tsd.rl file</a></li>
-<li class="chapter" data-level="4.3.4" data-path="input-and-output.html"><a href="input-and-output.html#tsd.mf-file"><i class="fa fa-check"></i><b>4.3.4</b> .tsd.mf file</a></li>
-<li class="chapter" data-level="4.3.5" data-path="input-and-output.html"><a href="input-and-output.html#tsd.obs-file"><i class="fa fa-check"></i><b>4.3.5</b> .tsd.obs file</a></li>
+<li class="chapter" data-level="4.3" data-path="input-files.html"><a href="input-files.html#time-series-data"><i class="fa fa-check"></i><b>4.3</b> Time-series data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="input-files.html"><a href="input-files.html#tsd.forc-file"><i class="fa fa-check"></i><b>4.3.1</b> .tsd.forc file</a></li>
+<li class="chapter" data-level="4.3.2" data-path="input-files.html"><a href="input-files.html#tsd.lai-file"><i class="fa fa-check"></i><b>4.3.2</b> .tsd.lai file</a></li>
+<li class="chapter" data-level="4.3.3" data-path="input-files.html"><a href="input-files.html#tsd.rl-file"><i class="fa fa-check"></i><b>4.3.3</b> .tsd.rl file</a></li>
+<li class="chapter" data-level="4.3.4" data-path="input-files.html"><a href="input-files.html#tsd.mf-file"><i class="fa fa-check"></i><b>4.3.4</b> .tsd.mf file</a></li>
+<li class="chapter" data-level="4.3.5" data-path="input-files.html"><a href="input-files.html#tsd.obs-file"><i class="fa fa-check"></i><b>4.3.5</b> .tsd.obs file</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-1-vauclin-experiment"><i class="fa fa-check"></i><b>5.1</b> Example 1: Vauclin Experiment</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-2-shall-hill-czo"><i class="fa fa-check"></i><b>5.2</b> Example 2: Shall Hill CZO</a></li>
-<li class="chapter" data-level="5.3" data-path="applications.html"><a href="applications.html#example-3-conestoga-watershed-pennsylvanis"><i class="fa fa-check"></i><b>5.3</b> Example 3: Conestoga Watershed, Pennsylvanis</a></li>
+<li class="chapter" data-level="5" data-path="output-files.html"><a href="output-files.html"><i class="fa fa-check"></i><b>5</b> Output files</a><ul>
+<li class="chapter" data-level="5.1" data-path="output-files.html"><a href="output-files.html#output-file-names"><i class="fa fa-check"></i><b>5.1</b> Output file names</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="automatic-hydrologic-modeling-with-pihm-system.html"><a href="automatic-hydrologic-modeling-with-pihm-system.html"><i class="fa fa-check"></i><b>6</b> Automatic hydrologic modeling with PIHM system</a></li>
+<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a><ul>
+<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#best-practice-suggestions"><i class="fa fa-check"></i><b>6.1</b> Best practice suggestions</a></li>
+<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-1-vauclin-experiment"><i class="fa fa-check"></i><b>6.2</b> Example 1: Vauclin Experiment</a></li>
+<li class="chapter" data-level="6.3" data-path="applications.html"><a href="applications.html#example-2-shall-hill-czo"><i class="fa fa-check"></i><b>6.3</b> Example 2: Shall Hill CZO</a></li>
+<li class="chapter" data-level="6.4" data-path="applications.html"><a href="applications.html#example-3-conestoga-watershed-pennsylvanis"><i class="fa fa-check"></i><b>6.4</b> Example 3: Conestoga Watershed, Pennsylvanis</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="automatic-hydrologic-modeling-with-pihm-system.html"><a href="automatic-hydrologic-modeling-with-pihm-system.html"><i class="fa fa-check"></i><b>7</b> Automatic hydrologic modeling with PIHM system</a></li>
+<li class="chapter" data-level="8" data-path="course-code-and-program-design.html"><a href="course-code-and-program-design.html"><i class="fa fa-check"></i><b>8</b> Course code and program design</a></li>
 <li class="divider"></li>
 <li><a href="mailto:<Lele Shu>lele.shu@gmail.com" target="blank">Contact us</a></li>
 
@@ -121,7 +127,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PIHMS technical documentation</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Penn State Integrated Hydrologic Model(PIHM)</a>
           </h1>
         </div>
 
@@ -178,14 +184,14 @@ cd builddir/</code></pre></li>
 <pre><code>ccmake </code></pre></li>
 <li><p>Run ccmake to configure your compile environment.</p>
 <pre><code>ccmake /Users/leleshu/Dropbox/PIHM/sundials/cvode-4.1.0</code></pre>
-<p><img src="Fig/ccmake/1.png" alt="Screen short of Step 1 in ccmake" /> This is a empty configure. Press <code>c</code> to start the configuration.</p></li>
+<p><img src="Fig/ccmake/1.png" alt="Screenshot of Step 1 in ccmake" /> This is an empty configure. Press <code>c</code> to start the configuration.</p></li>
 </ol>
 <p><img src="Fig/ccmake/2.png" alt="Screen short of Step 2 in ccmake" /> The default configuration. Make sure the value for three lines:</p>
 <pre><code>BUILD_CVODE = ON
 CMAKE_INSTALL_PREFIX = /usr/local/sundials
 EXAMPLES_INSTALL_PATH = /usr/local/sundials/examples</code></pre>
 <p>After the modification of values, press <code>c</code> to confirm configuration.</p>
-<p><img src="Fig/ccmake/3.png" alt="Screen short of Step 3 in ccmake" /> The ccmake configures the environment automatically. When the configuration is ready, press <code>g</code> to genrate and exit.</p>
+<p><img src="Fig/ccmake/3.png" alt="Screenshot of Step 3 in ccmake" /> The ccmake configures the environment automatically. When the configuration is ready, press <code>g</code> to generate and exit.</p>
 <ol style="list-style-type: decimal">
 <li><p>Then you run commands below:</p>
 <pre><code>make
@@ -237,7 +243,7 @@ Library/Include paths:
 <li><code>[-o output_folder]</code> is to write all model output variables in the specified output directory</li>
 <li><code>[-n Num_Threads]</code> is number of OpenMP threads, which works with <code>pihm_omp</code> only.</li>
 </ul>
-<p>When the <code>pihm++</code> program starts to run, the screen should look like this: <img src="Fig/CLI_SH.png" alt="Screen print of pihm++ running. Example project name is sh." /></p>
+<p>When the <code>pihm++</code> program starts to run, the screen should look like this: <img src="Fig/CLI_SH.png" alt="Screen print of pihm++ running. The example project name is sh." /></p>
 </div>
 </div>
 <div id="pihmgisr" class="section level2">
@@ -254,7 +260,7 @@ Library/Include paths:
         </div>
       </div>
 <a href="workflow-of-pihm-system.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="input-and-output.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="input-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

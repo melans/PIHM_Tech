@@ -5,8 +5,6 @@ author: "Lele Shu"
 date: "`r Sys.Date()`"
 documentclass: scrbook
 output:
-  bookdown::html_book:
-    theme: journal
   bookdown::pdf_book:
     template: null
     toc: true

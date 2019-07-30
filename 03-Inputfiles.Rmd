@@ -1,4 +1,4 @@
-# Input and output
+# Input files
 
 List of input files:
 

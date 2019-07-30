@@ -1,0 +1,45 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Output files
+
+
+## Output file names
+
+Format of output file names:
+
+**[Project Name].[Identifier].[Format]**
+
+-The *[Project Name]* is user defined name of the project, so every input and output files must start with the *[Project Name]*. 
+-The *[Format]* is one of *csv* or *dat*. *csv* is spreadsheet format and *dat* is bindary format.
+
+The *[Identifier]* is a combination of variables features, that in format of:
+**[Model Unit][Variable Type][Variable Name]**. *[Model Unit]* is one of three options of *ele* (elemtns), *riv* (river) or *lak* (lake). Variable type includes *y*, *v* and *q* that are state variable (in $L$), specific flux (in $L^3/L^2/T$) and flux (in $L^3/T$) respectively.  
+
+The list of output files is in following table. 
+
+| Identifier | Mod unit | Type | Var Name | Meaning | Unit | Old name|
+|:--------:|:-----:|:---:|:------:|:-------:|:------------:|:-----:|:-----:|
+| *.eleyic.* | ele | y | ic | Storage of Interception  | $m$  | .ic |
+| *.eleysnow.* | ele | y | snow |  Storage of Interception | $m$  | .snow |
+| *.eleysurf.* | ele | y | surf |  Storage of surface | $m$  | .surf |
+| *.eleyunsat.* | ele | y | unsat |  Storage of vados zone | $m$  | .unsat |
+| *.eleygw.* | ele | y | gw |  Groundwater head | $m$  | .GW |
+| *.elevetp.* | ele | v | etp | Potential ET  | $\frac{m^3}{m^2 d}$  | - |
+| *.elevetic.* | ele | v | etic |  Evap of interception | $\frac{m^3}{m^2 d}$  | .ET0 |
+| *.elevettr.* | ele | v | ettr | Transpiration  | $\frac{m^3}{m^2 d}$  | .ET1 |
+| *.elevetev.* | ele | v | etev | Soil Evaporation  | $\frac{m^3}{m^2 d}$  | .ET2 |
+| *.elevprcp.* | ele | v | prcp | Precipitation  | $\frac{m^3}{m^2 d}$  | - |
+| *.elevnetprcp.* | ele | v | netprcp | Net Precipitation  | $\frac{m^3}{m^2 d}$  | - |
+| *.elevinfil.* | ele | v | infil |  Infiltration Rate | $\frac{m^3}{m^2 d}$  | .infil |
+| *.elevrech.* | ele | v | rech | Recharge Rate  | $\frac{m^3}{m^2 d}$  | .Rech |
+| *.eleqsurf.* | ele | q | surf | Overland flow  | $m^3/d$  | .fluxsurf |
+| *.eleqsub.* | ele | q | sub | Subsurface flow  | $m^3/d$  | .fluxsub |
+| *.rivystage.* | riv | y | stage | River Stage  | $m$  | stage |
+| *.rivqup.* | riv | q | up | Flux to upstream | $m^3/d$  | .rivflx0 |
+| *.rivqdown.* | riv | q | down |  Flux to downstream | $m^3/d$  | .rivflx1 |
+| *.rivqsurf.* | riv | q | surf | Flux to landsurface  | $m^3/d$  | .rivflx1,2
+| *.rivqsub.* | riv | q | sub | Flux to subsurface  | $m^3/d$  | .rivflx4~8 |
+

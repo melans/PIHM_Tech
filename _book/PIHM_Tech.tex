@@ -74,7 +74,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{Technical Documentation}
 \author{Lele Shu}
-\date{2019-05-04}
+\date{2019-07-30}
 
 \begin{document}
 \maketitle
@@ -627,7 +627,7 @@ install_github('shulele/PIHMgisR')
 
 That is all you need to deploy the PIHMgisR.
 
-\chapter{Input and output}\label{input-and-output}
+\chapter{Input files}\label{input-files}
 
 List of input files:
 
@@ -1754,9 +1754,103 @@ Column i & Observational data \(i-1\) & ? & ? &\tabularnewline
 \bottomrule
 \end{longtable}
 
+\chapter{Output files}\label{output-files}
+
+\section{Output file names}\label{output-file-names}
+
+Format of output file names:
+
+\textbf{{[}Project Name{]}.{[}Identifier{]}.{[}Format{]}}
+
+-The \emph{{[}Project Name{]}} is user defined name of the project, so
+every input and output files must start with the \emph{{[}Project
+Name{]}}. -The \emph{{[}Format{]}} is one of \emph{csv} or \emph{dat}.
+\emph{csv} is spreadsheet format and \emph{dat} is bindary format.
+
+The \emph{{[}Identifier{]}} is a combination of variables features, that
+in format of: \textbf{{[}Model Unit{]}{[}Variable Type{]}{[}Variable
+Name{]}}. \emph{{[}Model Unit{]}} is one of three options of \emph{ele}
+(elemtns), \emph{riv} (river) or \emph{lak} (lake). Variable type
+includes \emph{y}, \emph{v} and \emph{q} that are state variable (in
+\(L\)), specific flux (in \(L^3/L^2/T\)) and flux (in \(L^3/T\))
+respectively.
+
+The list of output files is in following table.
+
+\begin{longtable}[]{@{}cccccccc@{}}
+\toprule
+Identifier & Mod unit & Type & Var Name & Meaning & Unit & Old name
+&\tabularnewline
+\midrule
+\endhead
+\emph{.eleyic.} & ele & y & ic & Storage of Interception & \(m\) & .ic
+&\tabularnewline
+\emph{.eleysnow.} & ele & y & snow & Storage of Interception & \(m\) &
+.snow &\tabularnewline
+\emph{.eleysurf.} & ele & y & surf & Storage of surface & \(m\) & .surf
+&\tabularnewline
+\emph{.eleyunsat.} & ele & y & unsat & Storage of vados zone & \(m\) &
+.unsat &\tabularnewline
+\emph{.eleygw.} & ele & y & gw & Groundwater head & \(m\) & .GW
+&\tabularnewline
+\emph{.elevetp.} & ele & v & etp & Potential ET & \(\frac{m^3}{m^2 d}\)
+& - &\tabularnewline
+\emph{.elevetic.} & ele & v & etic & Evap of interception &
+\(\frac{m^3}{m^2 d}\) & .ET0 &\tabularnewline
+\emph{.elevettr.} & ele & v & ettr & Transpiration &
+\(\frac{m^3}{m^2 d}\) & .ET1 &\tabularnewline
+\emph{.elevetev.} & ele & v & etev & Soil Evaporation &
+\(\frac{m^3}{m^2 d}\) & .ET2 &\tabularnewline
+\emph{.elevprcp.} & ele & v & prcp & Precipitation &
+\(\frac{m^3}{m^2 d}\) & - &\tabularnewline
+\emph{.elevnetprcp.} & ele & v & netprcp & Net Precipitation &
+\(\frac{m^3}{m^2 d}\) & - &\tabularnewline
+\emph{.elevinfil.} & ele & v & infil & Infiltration Rate &
+\(\frac{m^3}{m^2 d}\) & .infil &\tabularnewline
+\emph{.elevrech.} & ele & v & rech & Recharge Rate &
+\(\frac{m^3}{m^2 d}\) & .Rech &\tabularnewline
+\emph{.eleqsurf.} & ele & q & surf & Overland flow & \(m^3/d\) &
+.fluxsurf &\tabularnewline
+\emph{.eleqsub.} & ele & q & sub & Subsurface flow & \(m^3/d\) &
+.fluxsub &\tabularnewline
+\emph{.rivystage.} & riv & y & stage & River Stage & \(m\) & stage
+&\tabularnewline
+\emph{.rivqup.} & riv & q & up & Flux to upstream & \(m^3/d\) & .rivflx0
+&\tabularnewline
+\emph{.rivqdown.} & riv & q & down & Flux to downstream & \(m^3/d\) &
+.rivflx1 &\tabularnewline
+\emph{.rivqsurf.} & riv & q & surf & Flux to landsurface & \(m^3/d\) &
+.rivflx1,2\tabularnewline
+\emph{.rivqsub.} & riv & q & sub & Flux to subsurface & \(m^3/d\) &
+.rivflx4\textasciitilde{}8 &\tabularnewline
+\bottomrule
+\end{longtable}
+
 \chapter{Applications}\label{applications}
 
 Some \emph{significant} applications are demonstrated in this chapter.
+
+\section{Best practice suggestions}\label{best-practice-suggestions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Derive and QC all inputs (time mean, accumulation, screen fo
+  anormalies \ldots{})
+\item
+  Conduct offline simulations \ldots{}
+\item
+  Start with `idealized' forcing (Option FORC\_debug=1 in .cfg.para
+  file). Which will use uniform forcing data to drive the hydrologic
+  simulations.
+\item
+  Run with short time period, load the outputs and examine whether
+  results are in expection
+\item
+  If all above works, then hook all modules and run with your forcing
+  data.
+\end{enumerate}
 
 \section{Example 1: Vauclin
 Experiment}\label{example-1-vauclin-experiment}

@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 5 Applications | PIHMS technical documentation</title>
+  <title>Chapter 6 Applications | Penn State Integrated Hydrologic Model(PIHM)</title>
   <meta name="description" content="PIHM technical documentation">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 5 Applications | PIHMS technical documentation" />
+  <meta property="og:title" content="Chapter 6 Applications | Penn State Integrated Hydrologic Model(PIHM)" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Applications | PIHMS technical documentation" />
+  <meta name="twitter:title" content="Chapter 6 Applications | Penn State Integrated Hydrologic Model(PIHM)" />
   
   <meta name="twitter:description" content="PIHM technical documentation" />
   
@@ -25,14 +25,14 @@
 <meta name="author" content="Lele Shu">
 
 
-<meta name="date" content="2019-05-02">
+<meta name="date" content="2019-07-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="input-and-output.html">
+<link rel="prev" href="output-files.html">
 <link rel="next" href="automatic-hydrologic-modeling-with-pihm-system.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -69,9 +69,10 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-pihm"><i class="fa fa-check"></i><b>1.1</b> Why PIHM?</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#history-of-pihm-system"><i class="fa fa-check"></i><b>1.2</b> History of PIHM system</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#essential-terrestrial-variables"><i class="fa fa-check"></i><b>1.2.1</b> Essential Terrestrial Variables?</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#a-priori-data-sources"><i class="fa fa-check"></i><b>1.2.2</b> A-Priori Data Sources</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#history-of-pihm-system"><i class="fa fa-check"></i><b>1.2</b> History of PIHM system</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#steps-of-pihm-modeling"><i class="fa fa-check"></i><b>1.3</b> Steps of PIHM modeling</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#essential-terrestrial-variables"><i class="fa fa-check"></i><b>1.3.1</b> Essential Terrestrial Variables?</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#a-priori-data-sources"><i class="fa fa-check"></i><b>1.3.2</b> A-Priori Data Sources</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="workflow-of-pihm-system.html"><a href="workflow-of-pihm-system.html"><i class="fa fa-check"></i><b>2</b> Workflow of PIHM System</a></li>
@@ -83,32 +84,37 @@
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="install-pihm-and-pihmgisr.html"><a href="install-pihm-and-pihmgisr.html#pihmgisr"><i class="fa fa-check"></i><b>3.3</b> PIHMgisR</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="input-and-output.html"><a href="input-and-output.html"><i class="fa fa-check"></i><b>4</b> Input and output</a><ul>
-<li class="chapter" data-level="4.1" data-path="input-and-output.html"><a href="input-and-output.html#spatial-data"><i class="fa fa-check"></i><b>4.1</b> Spatial data</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="input-and-output.html"><a href="input-and-output.html#sp.mesh-file"><i class="fa fa-check"></i><b>4.1.1</b> .sp.mesh file</a></li>
-<li class="chapter" data-level="4.1.2" data-path="input-and-output.html"><a href="input-and-output.html#sp.att-file"><i class="fa fa-check"></i><b>4.1.2</b> .sp.att file</a></li>
-<li class="chapter" data-level="4.1.3" data-path="input-and-output.html"><a href="input-and-output.html#sp.riv-file"><i class="fa fa-check"></i><b>4.1.3</b> .sp.riv file</a></li>
-<li class="chapter" data-level="4.1.4" data-path="input-and-output.html"><a href="input-and-output.html#sp.rivchn-file"><i class="fa fa-check"></i><b>4.1.4</b> .sp.rivchn file</a></li>
+<li class="chapter" data-level="4" data-path="input-files.html"><a href="input-files.html"><i class="fa fa-check"></i><b>4</b> Input files</a><ul>
+<li class="chapter" data-level="4.1" data-path="input-files.html"><a href="input-files.html#spatial-data"><i class="fa fa-check"></i><b>4.1</b> Spatial data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="input-files.html"><a href="input-files.html#sp.mesh-file"><i class="fa fa-check"></i><b>4.1.1</b> .sp.mesh file</a></li>
+<li class="chapter" data-level="4.1.2" data-path="input-files.html"><a href="input-files.html#sp.att-file"><i class="fa fa-check"></i><b>4.1.2</b> .sp.att file</a></li>
+<li class="chapter" data-level="4.1.3" data-path="input-files.html"><a href="input-files.html#sp.riv-file"><i class="fa fa-check"></i><b>4.1.3</b> .sp.riv file</a></li>
+<li class="chapter" data-level="4.1.4" data-path="input-files.html"><a href="input-files.html#sp.rivchn-file"><i class="fa fa-check"></i><b>4.1.4</b> .sp.rivchn file</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="input-and-output.html"><a href="input-and-output.html#model-configuration-files"><i class="fa fa-check"></i><b>4.2</b> Model configuration files</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="input-and-output.html"><a href="input-and-output.html#cfg.para-file"><i class="fa fa-check"></i><b>4.2.1</b> .cfg.para file</a></li>
-<li class="chapter" data-level="4.2.2" data-path="input-and-output.html"><a href="input-and-output.html#cfg.calib-file"><i class="fa fa-check"></i><b>4.2.2</b> .cfg.calib file</a></li>
-<li class="chapter" data-level="4.2.3" data-path="input-and-output.html"><a href="input-and-output.html#cfg.ic-file"><i class="fa fa-check"></i><b>4.2.3</b> .cfg.ic file</a></li>
+<li class="chapter" data-level="4.2" data-path="input-files.html"><a href="input-files.html#model-configuration-files"><i class="fa fa-check"></i><b>4.2</b> Model configuration files</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="input-files.html"><a href="input-files.html#cfg.para-file"><i class="fa fa-check"></i><b>4.2.1</b> .cfg.para file</a></li>
+<li class="chapter" data-level="4.2.2" data-path="input-files.html"><a href="input-files.html#cfg.calib-file"><i class="fa fa-check"></i><b>4.2.2</b> .cfg.calib file</a></li>
+<li class="chapter" data-level="4.2.3" data-path="input-files.html"><a href="input-files.html#cfg.ic-file"><i class="fa fa-check"></i><b>4.2.3</b> .cfg.ic file</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="input-and-output.html"><a href="input-and-output.html#time-series-data"><i class="fa fa-check"></i><b>4.3</b> Time-series data</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="input-and-output.html"><a href="input-and-output.html#tsd.forc-file"><i class="fa fa-check"></i><b>4.3.1</b> .tsd.forc file</a></li>
-<li class="chapter" data-level="4.3.2" data-path="input-and-output.html"><a href="input-and-output.html#tsd.lai-file"><i class="fa fa-check"></i><b>4.3.2</b> .tsd.lai file</a></li>
-<li class="chapter" data-level="4.3.3" data-path="input-and-output.html"><a href="input-and-output.html#tsd.rl-file"><i class="fa fa-check"></i><b>4.3.3</b> .tsd.rl file</a></li>
-<li class="chapter" data-level="4.3.4" data-path="input-and-output.html"><a href="input-and-output.html#tsd.mf-file"><i class="fa fa-check"></i><b>4.3.4</b> .tsd.mf file</a></li>
-<li class="chapter" data-level="4.3.5" data-path="input-and-output.html"><a href="input-and-output.html#tsd.obs-file"><i class="fa fa-check"></i><b>4.3.5</b> .tsd.obs file</a></li>
+<li class="chapter" data-level="4.3" data-path="input-files.html"><a href="input-files.html#time-series-data"><i class="fa fa-check"></i><b>4.3</b> Time-series data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="input-files.html"><a href="input-files.html#tsd.forc-file"><i class="fa fa-check"></i><b>4.3.1</b> .tsd.forc file</a></li>
+<li class="chapter" data-level="4.3.2" data-path="input-files.html"><a href="input-files.html#tsd.lai-file"><i class="fa fa-check"></i><b>4.3.2</b> .tsd.lai file</a></li>
+<li class="chapter" data-level="4.3.3" data-path="input-files.html"><a href="input-files.html#tsd.rl-file"><i class="fa fa-check"></i><b>4.3.3</b> .tsd.rl file</a></li>
+<li class="chapter" data-level="4.3.4" data-path="input-files.html"><a href="input-files.html#tsd.mf-file"><i class="fa fa-check"></i><b>4.3.4</b> .tsd.mf file</a></li>
+<li class="chapter" data-level="4.3.5" data-path="input-files.html"><a href="input-files.html#tsd.obs-file"><i class="fa fa-check"></i><b>4.3.5</b> .tsd.obs file</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-1-vauclin-experiment"><i class="fa fa-check"></i><b>5.1</b> Example 1: Vauclin Experiment</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-2-shall-hill-czo"><i class="fa fa-check"></i><b>5.2</b> Example 2: Shall Hill CZO</a></li>
-<li class="chapter" data-level="5.3" data-path="applications.html"><a href="applications.html#example-3-conestoga-watershed-pennsylvanis"><i class="fa fa-check"></i><b>5.3</b> Example 3: Conestoga Watershed, Pennsylvanis</a></li>
+<li class="chapter" data-level="5" data-path="output-files.html"><a href="output-files.html"><i class="fa fa-check"></i><b>5</b> Output files</a><ul>
+<li class="chapter" data-level="5.1" data-path="output-files.html"><a href="output-files.html#output-file-names"><i class="fa fa-check"></i><b>5.1</b> Output file names</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="automatic-hydrologic-modeling-with-pihm-system.html"><a href="automatic-hydrologic-modeling-with-pihm-system.html"><i class="fa fa-check"></i><b>6</b> Automatic hydrologic modeling with PIHM system</a></li>
+<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a><ul>
+<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#best-practice-suggestions"><i class="fa fa-check"></i><b>6.1</b> Best practice suggestions</a></li>
+<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-1-vauclin-experiment"><i class="fa fa-check"></i><b>6.2</b> Example 1: Vauclin Experiment</a></li>
+<li class="chapter" data-level="6.3" data-path="applications.html"><a href="applications.html#example-2-shall-hill-czo"><i class="fa fa-check"></i><b>6.3</b> Example 2: Shall Hill CZO</a></li>
+<li class="chapter" data-level="6.4" data-path="applications.html"><a href="applications.html#example-3-conestoga-watershed-pennsylvanis"><i class="fa fa-check"></i><b>6.4</b> Example 3: Conestoga Watershed, Pennsylvanis</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="automatic-hydrologic-modeling-with-pihm-system.html"><a href="automatic-hydrologic-modeling-with-pihm-system.html"><i class="fa fa-check"></i><b>7</b> Automatic hydrologic modeling with PIHM system</a></li>
+<li class="chapter" data-level="8" data-path="course-code-and-program-design.html"><a href="course-code-and-program-design.html"><i class="fa fa-check"></i><b>8</b> Course code and program design</a></li>
 <li class="divider"></li>
 <li><a href="mailto:<Lele Shu>lele.shu@gmail.com" target="blank">Contact us</a></li>
 
@@ -121,7 +127,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PIHMS technical documentation</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Penn State Integrated Hydrologic Model(PIHM)</a>
           </h1>
         </div>
 
@@ -130,16 +136,26 @@
 
             <section class="normal" id="section-">
 <div id="applications" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Applications</h1>
+<h1><span class="header-section-number">Chapter 6</span> Applications</h1>
 <p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
+<div id="best-practice-suggestions" class="section level2">
+<h2><span class="header-section-number">6.1</span> Best practice suggestions</h2>
+<ol style="list-style-type: decimal">
+<li>Derive and QC all inputs (time mean, accumulation, screen fo anormalies …)</li>
+<li>Conduct offline simulations …</li>
+<li>Start with ‘idealized’ forcing (Option FORC_debug=1 in .cfg.para file). Which will use uniform forcing data to drive the hydrologic simulations.</li>
+<li>Run with short time period, load the outputs and examine whether results are in expection</li>
+<li>If all above works, then hook all modules and run with your forcing data.</li>
+</ol>
+</div>
 <div id="example-1-vauclin-experiment" class="section level2">
-<h2><span class="header-section-number">5.1</span> Example 1: Vauclin Experiment</h2>
+<h2><span class="header-section-number">6.2</span> Example 1: Vauclin Experiment</h2>
 </div>
 <div id="example-2-shall-hill-czo" class="section level2">
-<h2><span class="header-section-number">5.2</span> Example 2: Shall Hill CZO</h2>
+<h2><span class="header-section-number">6.3</span> Example 2: Shall Hill CZO</h2>
 </div>
 <div id="example-3-conestoga-watershed-pennsylvanis" class="section level2">
-<h2><span class="header-section-number">5.3</span> Example 3: Conestoga Watershed, Pennsylvanis</h2>
+<h2><span class="header-section-number">6.4</span> Example 3: Conestoga Watershed, Pennsylvanis</h2>
 
 </div>
 </div>
@@ -148,7 +164,7 @@
           </div>
         </div>
       </div>
-<a href="input-and-output.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="output-files.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="automatic-hydrologic-modeling-with-pihm-system.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
