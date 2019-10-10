@@ -74,7 +74,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{Technical Documentation}
 \author{Lele Shu}
-\date{2019-07-30}
+\date{2019-10-10}
 
 \begin{document}
 \maketitle
@@ -1117,7 +1117,7 @@ Maximum time step for CVODE solver\strut
 \strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-LSM\_STEP\strut
+ET\_STEP\strut
 \end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering\strut
 Time step of Evapotranspiration\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
@@ -1132,7 +1132,7 @@ START\strut
 \end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering\strut
 Start Time\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
--\strut
+0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 \(day\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
@@ -1150,35 +1150,13 @@ End Time\strut
 \strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-STEPSIZE\_FACTOR\strut
-\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering\strut
-Step size factor\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
--\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
--\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
-Temporary value\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\centering\strut
-MODEL\_STEPSIZE\strut
-\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering\strut
-Model step size\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
--\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(min\)\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\centering\strut
 dt\_ye\_snow\strut
 \end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering\strut
 Time step of output snow storage\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1189,7 +1167,7 @@ Time step of output surface storage\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1200,7 +1178,7 @@ Time step of output unsaturated storage\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1211,7 +1189,7 @@ Time step of output groundwater head\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1222,7 +1200,7 @@ Time step of output surface element flux\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m^3/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1233,7 +1211,7 @@ Time step of output subsurface element flux\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m^3/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1244,7 +1222,7 @@ Time step of output element flux, interception\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1255,7 +1233,7 @@ Time step of output element flux, transpiration\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1266,7 +1244,7 @@ Time step of output element flux, evaporation\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1277,7 +1255,7 @@ Time step of output element flux, potential ET\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1288,7 +1266,7 @@ Time step of output element flux, interception\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1299,7 +1277,7 @@ Time step of output element flux, interception\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1310,7 +1288,7 @@ Time step of output element flux, interception\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1321,7 +1299,7 @@ Time step of output river stage\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m^3/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1332,7 +1310,7 @@ Time step of output river flux, downstream\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m^3/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1343,7 +1321,7 @@ Time step of output river flux, surface flow\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m^3/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1354,7 +1332,7 @@ Time step of output river flux, base flow\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m^3/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1365,7 +1343,7 @@ Time step of output river flux, upstream\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
 0 \textasciitilde{} inf\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-\(m^3/day\)\strut
+\(min\)\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1391,41 +1369,49 @@ Time step of output river flux, upstream\strut
 Colname & Meaning & Range & Unit & Comments\tabularnewline
 \midrule
 \endhead
-KSATH & Horizontal conductivity of ground water & ? & - &\tabularnewline
-KSATV & Vertical conductivity of ground water & ? & - &\tabularnewline
-KINF & Vertical conductivity of top soil & ? & - &\tabularnewline
-KMACSATH & Horizontal conductivity of macropore & ? & - &\tabularnewline
-KMACSATV & Vertical conductivity of soil macropore & ? & -
+GEOL\_KSATH & Horizontal conductivity of ground water & ? & -
 &\tabularnewline
-DINF & Infiltration depth & ? & - &\tabularnewline
-DROOT & Root depth & & - &\tabularnewline
-DMAC & Macropore depth & & - &\tabularnewline
-THETAS & Porosity, saturated soil moisture & & - &\tabularnewline
-THETAR & Residual soil moisture & & - &\tabularnewline
-ALPHA & \(\alpha\) value in van Genuchten equation & & -
+GEOL\_KSATV & Vertical conductivity of ground water & ? & -
 &\tabularnewline
-BETA & \(\beta\) value in van Genuchten equation & & - &\tabularnewline
-MACVF & Vertical macropore areal fraction & & - &\tabularnewline
-MACHF & Horizontal macropore areal fraction & & - &\tabularnewline
-VEGFRAC & Vegetation fraction & & - &\tabularnewline
-ALBEDO & Emissitive reflection ratio & & - &\tabularnewline
-ROUGH & Manning's roughness of element surface & & - &\tabularnewline
-AQUIFER & Thichness of aquifer & & - &\tabularnewline
-PRCP & Precipitation & & - &\tabularnewline
-SFCTMP & Temperature & & - &\tabularnewline
-EC & Interception & & - &\tabularnewline
-ETT & Transpiration & & - &\tabularnewline
-EDIR & Evaporation & & - &\tabularnewline
+GEOL\_KMACSATH & Horizontal conductivity of macropore & ? & -
+&\tabularnewline
+GEOL\_DMAC & Macropore depth & & - &\tabularnewline
+GEOL\_THETAS & Porosity, saturated soil moisture & & - &\tabularnewline
+GEOL\_THETAR & Residual soil moisture & & - &\tabularnewline
+GEOL\_MACVF & Vertical macropore areal fraction & & - &\tabularnewline
+SOIL\_KINF & Vertical conductivity of top soil & ? & - &\tabularnewline
+SOIL\_KMACSATV & Vertical conductivity of soil macropore & ? & -
+&\tabularnewline
+SOIL\_DINF & Infiltration depth & ? & - &\tabularnewline
+SOIL\_DROOT & Root depth & & - &\tabularnewline
+SOIL\_ALPHA & \(\alpha\) value in van Genuchten equation & & -
+&\tabularnewline
+SOIL\_BETA & \(\beta\) value in van Genuchten equation & & -
+&\tabularnewline
+SOIL\_MACHF & Horizontal macropore areal fraction & & - &\tabularnewline
+LC\_VEGFRAC & Vegetation fraction & & - &\tabularnewline
+LC\_ALBEDO & Emissitive reflection ratio & & - &\tabularnewline
+LC\_ROUGH & Manning's roughness of element surface & & -
+&\tabularnewline
+LC\_SOILDGD & Soil degradation & & - &\tabularnewline
+LC\_IMPAF & Impervious areal fraction & & - &\tabularnewline
+LC\_ISMAX & Maximum interception & & - &\tabularnewline
+AQ\_DEPTH+ & Thichness of aquifer & & \(m\) &\tabularnewline
+TS\_PRCP & Precipitation & & - &\tabularnewline
+TS\_SFCTMP+ & Temperature & & \(C\) &\tabularnewline
+ET\_ETP & Transpiration & & - &\tabularnewline
+ET\_IC & Interception & & - &\tabularnewline
+ET\_TR & Evaporation & & - &\tabularnewline
+ET\_SOIL & Evaporation & & - &\tabularnewline
 RIV\_ROUGH & Manning's roughness of river & & - &\tabularnewline
 RIV\_KH & Conductivity of river bed & & - &\tabularnewline
-RIV\_DPTH & Depth of river cross section & & - &\tabularnewline
-RIV\_WDTH & Width of river cross section & & - &\tabularnewline
+RIV\_DPTH+ & Depth of river cross section & & \(m\) &\tabularnewline
+RIV\_WDTH+ & Width of river cross section & & \(m\) &\tabularnewline
 RIV\_SINU & Sinuosity of river path & & - &\tabularnewline
 RIV\_CWR & \(C_{wr}\) in Chezy equation & & - &\tabularnewline
-RIV\_BSLOPE & Slope of river bed & & - &\tabularnewline
-SOIL\_DGD & Soil degradation & & - &\tabularnewline
-IMPAF & Impervious areal fraction & & - &\tabularnewline
-ISMAX & Maximum interception & & - &\tabularnewline
+RIV\_BSLOPE+ & Slope of river bed & & \(m/m\) &\tabularnewline
+IC\_GW+ & Initial condition of groundwater & & \(m\) &\tabularnewline
+IC\_RIV+ & Initial condition of river stage & & \(m\) &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1779,14 +1765,14 @@ The list of output files is in following table.
 
 \begin{longtable}[]{@{}cccccccc@{}}
 \toprule
-Identifier & Mod unit & Type & Var Name & Meaning & Unit & Old name
-&\tabularnewline
+Identifier & Mod unit & Type & Var Name & Meaning & Unit & Old name in
+PIHM v.2.2 &\tabularnewline
 \midrule
 \endhead
 \emph{.eleyic.} & ele & y & ic & Storage of Interception & \(m\) & .ic
 &\tabularnewline
-\emph{.eleysnow.} & ele & y & snow & Storage of Interception & \(m\) &
-.snow &\tabularnewline
+\emph{.eleysnow.} & ele & y & snow & Storage of snow equivalence & \(m\)
+& .snow &\tabularnewline
 \emph{.eleysurf.} & ele & y & surf & Storage of surface & \(m\) & .surf
 &\tabularnewline
 \emph{.eleyunsat.} & ele & y & unsat & Storage of vados zone & \(m\) &
@@ -1795,6 +1781,8 @@ Identifier & Mod unit & Type & Var Name & Meaning & Unit & Old name
 &\tabularnewline
 \emph{.elevetp.} & ele & v & etp & Potential ET & \(\frac{m^3}{m^2 d}\)
 & - &\tabularnewline
+\emph{.eleveta.} & ele & v & eta & Actual ET & \(\frac{m^3}{m^2 d}\) & -
+&\tabularnewline
 \emph{.elevetic.} & ele & v & etic & Evap of interception &
 \(\frac{m^3}{m^2 d}\) & .ET0 &\tabularnewline
 \emph{.elevettr.} & ele & v & ettr & Transpiration &
@@ -1807,6 +1795,8 @@ Identifier & Mod unit & Type & Var Name & Meaning & Unit & Old name
 \(\frac{m^3}{m^2 d}\) & - &\tabularnewline
 \emph{.elevinfil.} & ele & v & infil & Infiltration Rate &
 \(\frac{m^3}{m^2 d}\) & .infil &\tabularnewline
+\emph{.elevexfil.} & ele & v & infil & Exfiltration Rate &
+\(\frac{m^3}{m^2 d}\) & - &\tabularnewline
 \emph{.elevrech.} & ele & v & rech & Recharge Rate &
 \(\frac{m^3}{m^2 d}\) & .Rech &\tabularnewline
 \emph{.eleqsurf.} & ele & q & surf & Overland flow & \(m^3/d\) &
@@ -1823,6 +1813,87 @@ Identifier & Mod unit & Type & Var Name & Meaning & Unit & Old name
 .rivflx1,2\tabularnewline
 \emph{.rivqsub.} & riv & q & sub & Flux to subsurface & \(m^3/d\) &
 .rivflx4\textasciitilde{}8 &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\section{Data format in ASCII (.csv)
+file}\label{data-format-in-ascii-.csv-file}
+
+N - Number of column of output data, excluding the time column. m -
+Number of time-step. StartTime - String of date/time (YYYYMMDD or
+YYYYMMDD.hhmmss)
+
+\begin{longtable}[]{@{}cccccc@{}}
+\toprule
+N & StartTime & & & &\tabularnewline
+\midrule
+\endhead
+\(T_1\) & \(v_{1 \cdot 1}\) & \(v_{1 \cdot 2}\) & \ldots{} &
+\(v_{1 \cdot N}\) &\tabularnewline
+\(T_2\) & \(v_{2 \cdot 1}\) & \(v_{2 \cdot 2}\) & \ldots{} &
+\(v_{2 \cdot N}\) &\tabularnewline
+\(T_3\) & \(v_{3 \cdot 1}\) & \(v_{3 \cdot 2}\) & \ldots{} &
+\(v_{3 \cdot N}\) &\tabularnewline
+\ldots{} & \ldots{} & \ldots{} & \ldots{} & \ldots{} &\tabularnewline
+\(T_{m}\) & \(v_{m \cdot 1}\) & \(v_{m \cdot 2}\) & \ldots{} &
+\(v_{m \cdot N}\) &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\section{Data format in binary (.dat)
+file}\label{data-format-in-binary-.dat-file}
+
+The value saved in binary file are identical from ASCII format, but
+different data structure.
+
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule
+ID & \(i\) & Value & Format & Length\tabularnewline
+\midrule
+\endhead
+1 & - & \(N\) & double & 8\tabularnewline
+2 & - & StartTime & double & 8\tabularnewline
+3 & 0 & \(T_1\) & double & 8\tabularnewline
+4 & 1 & \(v_{1 \cdot 1}\) & double & 8\tabularnewline
+5 & 2 & \(v_{1 \cdot 2}\) & double & 8\tabularnewline
+\ldots{} & \ldots{} & \ldots{} & double & 8\tabularnewline
+\((N+1) * (T-1) + i +3\) & N & \(v_{1 \cdot N}\) & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & 0 & \(T_2\) & double & 8\tabularnewline
+\((N+1) * (T-1) + i +3\) & 1 & \(v_{2 \cdot 1}\) & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & 2 & \(v_{2 \cdot 2}\) & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & \ldots{} & \ldots{} & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & N & \(v_{2 \cdot N}\) & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & 0 & \(T_3\) & double & 8\tabularnewline
+\((N+1) * (T-1) + i +3\) & 1 & \(v_{3 \cdot 1}\) & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & 2 & \(v_{3 \cdot 2}\) & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & \ldots{} & \ldots{} & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & N & \(v_{3 \cdot N}\) & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & \ldots{} & \ldots{} & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & \ldots{} & \ldots{} & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & \ldots{} & \ldots{} & double &
+8\tabularnewline
+\((N+1) * (T-1) + i +3\) & \ldots{} & \ldots{} & double &
+8\tabularnewline
+\((N+1) * (m-1) + i +3\) & 0 & \(T_{m}\) & double & 8\tabularnewline
+\((N+1) * (m-1) + i +3\) & 1 & \(v_{m \cdot 1}\) & double &
+8\tabularnewline
+\((N+1) * (m-1) + i +3\) & 2 & \(v_{m \cdot 2}\) & double &
+8\tabularnewline
+\((N+1) * (m-1) + i +3\) & \ldots{} & \ldots{} & double &
+8\tabularnewline
+\((N+1) * (m-1) + i +3\) & N & \(v_{m \cdot N}\) & double &
+8\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1859,6 +1930,51 @@ Experiment}\label{example-1-vauclin-experiment}
 
 \section{Example 3: Conestoga Watershed,
 Pennsylvanis}\label{example-3-conestoga-watershed-pennsylvanis}
+
+\chapter{Calibration}\label{calibration}
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+File & Comments & Header & \# of column\tabularnewline
+\midrule
+\endhead
+.cfg.cmaes & Configuration of CMA-ES method & No & -\tabularnewline
+\bottomrule
+\end{longtable}
+
+Values in .calib.cmaes file:
+
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule
+Item & Meaning & Default value & Range & Unit\tabularnewline
+\midrule
+\endhead
+lambda & Number of children in each generation & 48 & & -\tabularnewline
+stopfitness & Threshold to accept the \emph{best} solution & 0.3 & &
+-\tabularnewline
+maxgen & Maximun generations & 48 & & -\tabularnewline
+sigma & & 0.8 & & -\tabularnewline
+updateic & Whether to update initial condition after each generation & 0
+& 0/1 & -\tabularnewline
+walltime & Walltime to kill the modeling thread & 86400 & 0-inf &
+second\tabularnewline
+nspingup & Number of days for spinup & 0 & 0-inf & day\tabularnewline
+& & & & -\tabularnewline
+\bottomrule
+\end{longtable}
+
+Values in .calib.range file:
+
+Rows: Values in .cfg.calib file. Column: \textbar{} Item \textbar{}
+Meaning \textbar{} Default value \textbar{} Range \textbar{} Unit
+\textbar{}
+\textbar{}:------:\textbar{}:--------------------------:\textbar{}:---------:\textbar{}:---------:\textbar{}:--------:\textbar{}
+\textbar{} On/off \textbar{} On or Off \textbar{} 0 \textbar{} 0/1
+\textbar{} - \textbar{} \textbar{} log \textbar{} Whether logrithm
+\textbar{} 0 \textbar{} 0/1 \textbar{} - \textbar{} \textbar{} min
+\textbar{} Minimun value \textbar{} - \textbar{} - \textbar{} -
+\textbar{} \textbar{} max \textbar{} Maximun value \textbar{} -
+\textbar{} - \textbar{} - \textbar{}
 
 \chapter{Automatic hydrologic modeling with PIHM
 system}\label{automatic-hydrologic-modeling-with-pihm-system}
