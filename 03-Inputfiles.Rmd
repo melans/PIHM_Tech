@@ -163,29 +163,27 @@ There are two tables in the .mesh file, the one is a table of elements and the o
 | RELTOL| Relative tolerance for CVODE solver | 1e-6 ~ 0.1 | - | |  
 | INIT_SOLVER_STEP| Initial time step for CVODE solver | ? | - | |  
 | MAX_SOLVER_STEP| Maximum time step for CVODE solver | ? | - | |  
-| LSM_STEP| Time step of Evapotranspiration | 1~360 | $min$ | |  
-| START| Start Time | - | $day$ | |  
+| ET_STEP| Time step of Evapotranspiration | 1~360 | $min$ | |  
+| START| Start Time | 0 ~ inf | $day$ | |  
 | END| End Time | - | $day$ | |  
-| STEPSIZE_FACTOR| Step size factor | - | - | Temporary value |  
-| MODEL_STEPSIZE| Model step size | - | $min$ |  |  
-| dt_ye_snow | Time step of output snow storage | 0 ~ inf | $m$ | |  
-| dt_ye_surf | Time step of output surface storage | 0 ~ inf | $m$ | |  
-| dt_ye_unsat | Time step of output unsaturated storage | 0 ~ inf | $m$ | |  
-| dt_ye_gw | Time step of output groundwater head | 0 ~ inf | $m$ | |  
-| dt_Qe_surf | Time step of output surface element flux | 0 ~ inf | $m^3/day$ | |  
-| dt_Qe_sub | Time step of output subsurface element flux  | 0 ~ inf | $m^3/day$ | |  
-| dt_qe_et0 | Time step of output element flux, interception | 0 ~ inf | $m/day$ | |  
-| dt_qe_et1 | Time step of output element flux, transpiration | 0 ~ inf | $m/day$ | |  
-| dt_qe_et2 | Time step of output element flux, evaporation | 0 ~ inf | $m/day$ | |  
-| dt_qe_etp | Time step of output element flux, potential ET | 0 ~ inf | $m/day$ | |  
-| dt_qe_prcp | Time step of output element flux, interception | 0 ~ inf | $m/day$ | |  
-| dt_qe_infil | Time step of output element flux, interception | 0 ~ inf | $m/day$ | |  
-| dt_qe_rech | Time step of output element flux, interception | 0 ~ inf | $m/day$ | |  
-| dt_yr_stage | Time step of output river stage | 0 ~ inf | $m^3/day$ | |  
-| dt_Qr_down | Time step of output river flux, downstream | 0 ~ inf | $m^3/day$ | |  
-| dt_Qr_surf | Time step of output river flux, surface flow | 0 ~ inf | $m^3/day$ | |  
-| dt_Qr_sub | Time step of output river flux, base flow | 0 ~ inf | $m^3/day$ | |  
-| dt_Qr_up | Time step of output river flux, upstream | 0 ~ inf | $m^3/day$ | |  
+| dt_ye_snow | Time step of output snow storage | 0 ~ inf | $min$ | |  
+| dt_ye_surf | Time step of output surface storage | 0 ~ inf | $min$ | |  
+| dt_ye_unsat | Time step of output unsaturated storage | 0 ~ inf | $min$ | |  
+| dt_ye_gw | Time step of output groundwater head | 0 ~ inf | $min$ | |  
+| dt_Qe_surf | Time step of output surface element flux | 0 ~ inf | $min$ | |  
+| dt_Qe_sub | Time step of output subsurface element flux  | 0 ~ inf | $min$ | |  
+| dt_qe_et0 | Time step of output element flux, interception | 0 ~ inf | $min$ | |  
+| dt_qe_et1 | Time step of output element flux, transpiration | 0 ~ inf | $min$ | |  
+| dt_qe_et2 | Time step of output element flux, evaporation | 0 ~ inf | $min$ | |  
+| dt_qe_etp | Time step of output element flux, potential ET | 0 ~ inf | $min$ | |  
+| dt_qe_prcp | Time step of output element flux, interception | 0 ~ inf | $min$ | |  
+| dt_qe_infil | Time step of output element flux, interception | 0 ~ inf | $min$ | |  
+| dt_qe_rech | Time step of output element flux, interception | 0 ~ inf | $min$ | |  
+| dt_yr_stage | Time step of output river stage | 0 ~ inf | $min$ | |  
+| dt_Qr_down | Time step of output river flux, downstream | 0 ~ inf | $min$ | |  
+| dt_Qr_surf | Time step of output river flux, surface flow | 0 ~ inf | $min$ | |  
+| dt_Qr_sub | Time step of output river flux, base flow | 0 ~ inf | $min$ | |  
+| dt_Qr_up | Time step of output river flux, upstream | 0 ~ inf | $min$ | |  
 
 
 
@@ -196,39 +194,42 @@ There are two tables in the .mesh file, the one is a table of elements and the o
   
 | Colname | Meaning | Range | Unit | Comments |
  |:------:|:------------------:|:------:|:------:|:---------------------:|
-| KSATH | Horizontal conductivity of ground water | ? | - | |  
-| KSATV | Vertical conductivity of ground water  | ? | - | | 
-| KINF | Vertical conductivity of top soil | ? | - | |  
-| KMACSATH | Horizontal conductivity of macropore | ? | - | |  
-| KMACSATV | Vertical conductivity of soil macropore | ? | - | |  
-| DINF | Infiltration depth | ? | - | |  
-| DROOT | Root depth |  | - | |  
-| DMAC | Macropore depth |  | - | |  
-| THETAS | Porosity, saturated soil moisture |  | - | |  
-| THETAR | Residual soil moisture |  | - | |  
-| ALPHA | $\alpha$ value in van Genuchten equation |  | - | |  
-| BETA | $\beta$ value in van Genuchten equation |  | - | |  
-| MACVF | Vertical macropore areal fraction |  | - | |  
-| MACHF | Horizontal macropore areal fraction |  | - | |  
-| VEGFRAC | Vegetation fraction |  | - | |  
-| ALBEDO | Emissitive reflection ratio |  | - | |  
-| ROUGH | Manning's roughness of element surface |  | - | |  
-| AQUIFER | Thichness of aquifer |  | - | |  
-| PRCP | Precipitation |  | - | |  
-| SFCTMP | Temperature |  | - | |  
-| EC | Interception |  | - | |  
-| ETT | Transpiration |  | - | |  
-| EDIR | Evaporation |  | - | |  
+| GEOL_KSATH | Horizontal conductivity of ground water | ? | - | |  
+| GEOL_KSATV | Vertical conductivity of ground water  | ? | - | | 
+| GEOL_KMACSATH | Horizontal conductivity of macropore | ? | - | |  
+| GEOL_DMAC | Macropore depth |  | - | |  
+| GEOL_THETAS | Porosity, saturated soil moisture |  | - | |  
+| GEOL_THETAR | Residual soil moisture |  | - | |  
+| GEOL_MACVF | Vertical macropore areal fraction |  | - | |  
+| SOIL_KINF | Vertical conductivity of top soil | ? | - | |  
+| SOIL_KMACSATV | Vertical conductivity of soil macropore | ? | - | | 
+| SOIL_DINF | Infiltration depth | ? | - | |  
+| SOIL_DROOT | Root depth |  | - | |  
+| SOIL_ALPHA | $\alpha$ value in van Genuchten equation |  | - | |  
+| SOIL_BETA | $\beta$ value in van Genuchten equation |  | - | |  
+| SOIL_MACHF | Horizontal macropore areal fraction |  | - | |  
+| LC_VEGFRAC | Vegetation fraction |  | - | |  
+| LC_ALBEDO | Emissitive reflection ratio |  | - | |  
+| LC_ROUGH | Manning's roughness of element surface |  | - | |  
+| LC_SOILDGD | Soil degradation |  | - | |  
+| LC_IMPAF | Impervious areal fraction |  | - | |  
+| LC_ISMAX | Maximum interception |  | - | |  
+| AQ_DEPTH+ | Thichness of aquifer |  | $m$ | |  
+| TS_PRCP | Precipitation |  | - | |  
+| TS_SFCTMP+ | Temperature |  | $C$ | |  
+| ET_ETP | Transpiration |  | - | |  
+| ET_IC | Interception |  | - | |  
+| ET_TR | Evaporation |  | - | |   
+| ET_SOIL | Evaporation |  | - | |  
 | RIV_ROUGH | Manning's roughness of river |  | - | |  
 | RIV_KH | Conductivity of river bed |  | - | |  
-| RIV_DPTH | Depth of river cross section |  | - | |  
-| RIV_WDTH | Width of river cross section |  | - | |  
+| RIV_DPTH+ | Depth of river cross section |  | $m$ | |  
+| RIV_WDTH+ | Width of river cross section |  | $m$ | |  
 | RIV_SINU | Sinuosity of river path |  | - | |  
 | RIV_CWR | $C_{wr}$ in Chezy equation |  | - | |  
-| RIV_BSLOPE | Slope of river bed |  | - | |  
-| SOIL_DGD | Soil degradation |  | - | |  
-| IMPAF | Impervious areal fraction |  | - | |  
-| ISMAX | Maximum interception |  | - | |  
+| RIV_BSLOPE+ | Slope of river bed |  | $m/m$ | |  
+| IC_GW+ | Initial condition of groundwater |  | $m$ | |  
+| IC_RIV+ | Initial condition of river stage |  | $m$ | |  
 
 
 ### .cfg.ic file
